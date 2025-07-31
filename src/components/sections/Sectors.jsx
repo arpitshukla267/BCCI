@@ -37,7 +37,7 @@ const sectorsData = [
 
 export default function Sectors() {
   return (
-  <section className="w-full max-h-fit bg-white px-4 md:px-16 py-3 relative overflow-hidden">
+  <section className="w-full max-h-fit bg-white px-4 md:px-16 py-3 mb-[-7rem] md:mb-0 relative overflow-hidden">
   <h1 className="text-3xl sm:text-4xl font-bold underline text-orange-500 text-center mb-8">
     Sectors
   </h1>
@@ -94,7 +94,7 @@ function SectorCard({ sector, index }) {
 
   return (
     <motion.div
-      className="w-full mb-20 bg-transparent lg:max-w-[250px] sm:max-w-[160px] md:max-w-[180px] lg:h-[500px] h-[300px] md:h-[350px] rounded-xl overflow-hidden cursor-pointer flex flex-col"
+      className="w-full md:mb-20 mb-10 bg-transparent lg:max-w-[250px] sm:max-w-[160px] md:max-w-[180px] lg:h-[500px] h-[300px] md:h-[350px] rounded-xl overflow-hidden cursor-pointer flex flex-col"
       onMouseEnter={!isTouch ? () => setHovered(true) : undefined}
       onMouseLeave={!isTouch ? () => setHovered(false) : undefined}
       onClick={toggleHover}

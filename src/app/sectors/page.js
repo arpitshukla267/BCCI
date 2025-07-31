@@ -8,7 +8,7 @@ import SectorCard from '@/components/ui/SectorCard'; // ✅ Added this
 
 function page() {
   return (
-    <div>
+    <div >
       <div>
         <Nav />
       </div>

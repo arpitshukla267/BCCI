@@ -96,15 +96,15 @@ export default function HowWeWork() {
               onMouseLeave={() => setHoveredIndex(null)}
               className={getCardClasses(index)}
             >
-              <div className="flex flex-col  bg-transparent items-center text-center md:p-4 transition-all duration-300 w-full">
+              <div className="flex flex-col mb-8 bg-transparent items-center text-center md:p-4 transition-all duration-300 w-full">
                 <Image
                   src={card.image}
                   alt={`Image for ${index}`}
                   width={220}
                   height={64}
-                  className="mb-4 max-w-60 object-contain"
+                  className="md:mb-4 mb-1 md:max-w-60 max-w-40 object-contain"
                 />
-                <h3 className="text-xl bg-orange-500 text-white font-semibold rounded-b-[100rem] min-h-[7.5rem] px-15 py-5">
+                <h3 className="md:text-xl text-md bg-orange-500 text-white font-semibold rounded-b-[100rem] md:min-h-[7.5rem] min-h-[5.5rem] md:px-15 px-10 md:py-5 py-3">
                   {card.title}
                 </h3>
               </div>
@@ -113,7 +113,7 @@ export default function HowWeWork() {
         </div>
 
         {/* Description below */}
-        <div className="mt-30 h-20 flex items-center justify-center px-6">
+        <div className="md:mt-30 h-20 mb-8 flex items-center justify-center px-6">
           {hoveredIndex !== null && (
             <p
               key={hoveredIndex}
