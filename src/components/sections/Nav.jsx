@@ -94,7 +94,7 @@ function Nav() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="md:hidden w-full bg-[#F15A24] rounded-tl-3xl rounded-br-3xl px-4 z-40 overflow-hidden"
+            className="md:hidden w-full bg-[#F15A24] rounded-tl-3xl rounded-br-3xl px-4 mt-5 z-40 overflow-hidden"
           >
             <ul className="flex flex-col gap-4 text-white uppercase font-semibold text-sm py-4">
               <Link href="/theChambers" className="border-b border-white border-b-[1px] pb-1">The Chamber</Link>

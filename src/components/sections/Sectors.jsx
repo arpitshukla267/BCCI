@@ -8,30 +8,30 @@ const sectorsData = [
   {
     id: 1,
     title: 'Infrastructure',
-    image: '/sectors1.jpg',
+    image: '/sectors1.jpeg',
     hoverTitle: 'Infrastructure Details',
-    hoverImage: '/services1.jpeg',
+    hoverImage: '/sectors1hov.jpeg',
   },
   {
     id: 2,
     title: 'Agro-Food-&-Processing',
-    image: '/sectors1.jpg',
+    image: '/.jpeg',
     hoverTitle: 'Agro Expanded',
-    hoverImage: '/services2.jpeg',
+    hoverImage: '/sectors2hov.jpeg',
   },
   {
     id: 3,
     title: 'Corporate Governance',
-    image: '/sectors1.jpg',
+    image: '/sectors2.jpeg',
     hoverTitle: 'Corporate Deep Dive',
     hoverImage: '/services3.jpeg',
   },
   {
     id: 4,
     title: 'Startup & Entrepreneurship',
-    image: '/sectors1.jpg',
+    image: '/services1.jpeg',
     hoverTitle: 'Startup Growth',
-    hoverImage: '/services4.jpeg',
+    hoverImage: '/sectors4hov.jpeg',
   },
 ];
 

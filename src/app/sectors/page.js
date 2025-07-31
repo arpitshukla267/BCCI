@@ -71,7 +71,7 @@ function page() {
         </div>
       </div>
 
-      <div className='lg:mt-80 md:mt-40 mt-10'>
+      <div className='lg:mt-30 md:mt-40 mt-10'>
         <Footer />
       </div>
     </div>
