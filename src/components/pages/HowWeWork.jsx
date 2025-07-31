@@ -58,7 +58,7 @@ export default function HowWeWork() {
   };
 
   return (
-    <div className="relative bg-white min-h-fit overflow-hidden pb-6 px-4 mt-94 md:mt-[-5rem]">
+    <div className="relative bg-white min-h-fit overflow-hidden pb-6 px-4 mt-[26rem] md:mt-[-5rem]">
       {/* ✅ Background watermark image */}
           <div className="absolute right-[-55rem] inset-0 opacity-20 z-0 pointer-events-none">
             <Image
