@@ -69,7 +69,7 @@ function Nav() {
 
       {/* Orange Curve Strip */}
       <div className="px-4 sm:px-10">
-        <div className="w-full h-[14px] bg-[#F15A24] rounded-tl-3xl z-1 rounded-br-3xl mb-5"></div>
+        <div className="w-full h-[14px] bg-[#F15A24] rounded-tl-3xl z-1 rounded-br-3xl md:mb-5 mb-[-8px]"></div>
       </div>
      <div className="px-10">
       {/* Desktop Nav */}
