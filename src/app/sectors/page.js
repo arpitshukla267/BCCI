@@ -1,0 +1,81 @@
+"use client";
+
+import Nav from '@/components/sections/Nav';
+import Footer from '@/components/sections/Footer';
+import React from 'react';
+import sectors from '@/components/data/sectors';
+import SectorCard from '@/components/ui/SectorCard'; // ✅ Added this
+
+function page() {
+  return (
+    <div>
+      <div>
+        <Nav />
+      </div>
+
+      <div className="px-10">
+        {/* Hero Section */}
+        <div
+          className="hidden w-full min-h-[400px] lg:flex flex-col items-center justify-center bg-cover bg-center"
+          style={{ backgroundImage: "url('/sectorsPage.png')" }}
+        ></div>
+
+        <div className="block w-full mt-30 lg:hidden text-center text-orange-500 text-3xl sm:text-xl font-bold p-10 bg-white relative">
+          Sectors
+        </div>
+      </div>
+
+      {/* Black line at left */}
+      <div className="hidden xl:flex absolute left-0 w-full">
+        <div className="absolute left-[-5.5rem] top-[10rem] text-black rotate-270 text-3xl tracking-wide">
+          Connect with us
+        </div>
+        <div className="h-[20rem] w-1 rounded-4xl bg-black absolute left-10"></div>
+      </div>
+
+      {/* All 36 sectors */}
+      <div className="min-h-screen lg:px-18 md:px-10 px-3 py-8 bg-white">
+        <div className="flex flex-row justify-center items-center gap-6 px-3">
+         <div className='flex md:flex-row flex-col flex-1 justify-center items-center gap-6 self-start'>
+          <div className='flex flex-1 flex-col self-start items-start justify-start gap-4'>
+            {sectors.map((sector, index) =>
+              index <= 8 ? (
+                <SectorCard key={index} name={sector.name} image={sector.image} />
+              ) : null
+            )}
+          </div>
+          <div className='flex flex-1 flex-col self-start items-start justify-start gap-4'>
+            {sectors.map((sector, index) =>
+              index > 8 && index<=17 ? (
+                <SectorCard key={index} name={sector.name} image={sector.image} />
+              ) : null
+            )}
+          </div>
+         </div>
+         <div className='flex md:flex-row flex-col flex-1 justify-center items-center gap-6 self-start'> 
+          <div className='flex flex-1 flex-col self-start items-start justify-start gap-4'>
+            {sectors.map((sector, index) =>
+              index > 17 && index<=26 ? (
+                <SectorCard key={index} name={sector.name} image={sector.image} />
+              ) : null
+            )}
+          </div>
+          <div className='flex flex-1 flex-col self-start items-start justify-start gap-4'>
+            {sectors.map((sector, index) =>
+              index > 26 && index<=35 ? (
+                <SectorCard key={index} name={sector.name} image={sector.image} />
+              ) : null
+            )}
+          </div>
+         </div> 
+        </div>
+      </div>
+
+      <div className='lg:mt-80 md:mt-40 mt-10'>
+        <Footer />
+      </div>
+    </div>
+  );
+}
+
+export default page;
