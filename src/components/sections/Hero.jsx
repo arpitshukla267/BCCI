@@ -83,7 +83,7 @@ export default function Hero() {
   return (
     <div>
       <Nav />
-      <h1 className="md:hidden mt-40 text-5xl font-bold text-black relative z-20 px-5">
+      <h1 className="md:hidden mt-40 text-4xl font-bold text-black relative z-20 px-5">
         For<br/>business.<br/>For you.
       </h1>
       {/* ---- DESKTOP (fade animation) ---- */}

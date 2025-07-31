@@ -26,8 +26,9 @@ function Page() {
 
   return (
     <div>
+      <div>
       <Nav />
-
+</div>
       {/* Heading */}
       <div className="text-center mt-10">
         <h1 className=" inline-block text-4xl font-extrabold text-orange-500  mb-10 after:content-[''] after:block after:h-[5px] after:w-[60%] after:bg-orange-500 after:mx-auto after:mt-1 after:rounded-full">
@@ -38,7 +39,7 @@ function Page() {
       {/* Top Static Row */}
       <div className="flex flex-col md:flex-row justify-center items-center gap-9 px-4 mt-10 mb-10">
         {/* First Box */}
-        <div className="flex flex-col md:flex-row items-center bg-white p-0 rounded-2xl shadow-xl max-w-3xl w-full md:w-auto h-auto md:h-[245px]">
+        <div className="flex flex-col md:flex-row items-center bg-white p-0 rounded-2xl shadow-xl max-w-3xl w-full md:w-auto h-auto md:h-[258px]">
           <Image
             src="/Newz1.png"
             alt="Event"
