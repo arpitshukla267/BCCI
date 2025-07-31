@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -45,11 +45,19 @@ const services = [
 
 export default function Services() {
   const [activeId, setActiveId] = useState(null);
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
+  const screenWidth = hasMounted ? window.innerWidth : 1024;
+
   const activeService = services.find((s) => s.id === activeId);
 
   const handleInteraction = (id) => {
     // Toggle for mobile/tablet; hover handles desktop
-    if (window.innerWidth < 768) {
+    if (screenWidth < 768) {
       setActiveId((prevId) => (prevId === id ? null : id));
     }
   };
@@ -90,29 +98,29 @@ export default function Services() {
           const isActive = activeId === service.id;
 
           return (
-           <motion.div
-             key={service.id}
-             onClick={() => handleInteraction(service.id)}
-             onMouseEnter={() => {
-               if (window.innerWidth >= 768) setActiveId(service.id);
-             }}
-             onMouseLeave={() => {
-               if (window.innerWidth >= 768) setActiveId(null);
-             }}
-             className="group relative rounded-2xl overflow-hidden md:h-[560px] h-[360px] shadow-md bg-white transition-all duration-300 cursor-pointer"
-             style={{
-               width: isActive
-                 ? window.innerWidth >= 768
-                   ? '400px' // PC width when active
-                   : '350px' // Mobile width when active
-                 : window.innerWidth >= 768
-                 ? '280px'
-                 :'240px',  // Default width
-               zIndex: isActive ? 10 : 1,
-             }}
-             animate={{ scale: isActive ? 1 : 1 }}
-             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-           >
+            <motion.div
+              key={service.id}
+              onClick={() => handleInteraction(service.id)}
+              onMouseEnter={() => {
+                if (screenWidth >= 768) setActiveId(service.id);
+              }}
+              onMouseLeave={() => {
+                if (screenWidth >= 768) setActiveId(null);
+              }}
+              className="group relative rounded-2xl overflow-hidden md:h-[560px] h-[360px] shadow-md bg-white transition-all duration-300 cursor-pointer"
+              style={{
+                width: isActive
+                  ? screenWidth >= 768
+                    ? '400px' // PC width when active
+                    : '350px' // Mobile width when active
+                  : screenWidth >= 768
+                  ? '280px'
+                  : '220px', // Default width
+                zIndex: isActive ? 10 : 1,
+              }}
+              animate={{ scale: isActive ? 1 : 1 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+            >
               <Image
                 src={service.image}
                 alt={`Service ${service.id}`}

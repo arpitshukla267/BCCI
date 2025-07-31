@@ -15,7 +15,7 @@ const sectorsData = [
   {
     id: 2,
     title: 'Agro-Food-&-Processing',
-    image: '/.jpeg',
+    image: '/agro-food-processing.jpg',
     hoverTitle: 'Agro Expanded',
     hoverImage: '/sectors2hov.jpeg',
   },
