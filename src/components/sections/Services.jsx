@@ -107,7 +107,7 @@ export default function Services() {
               onMouseLeave={() => {
                 if (screenWidth >= 768) setActiveId(null);
               }}
-              className="group relative rounded-2xl overflow-hidden md:h-[560px] h-[360px] shadow-md bg-white transition-all duration-300 cursor-pointer"
+              className="group relative rounded-2xl overflow-hidden md:h-[560px] h-[360px] shadow-md bg-white transition-all duration-300 cursor-pointer mx-auto"
               style={{
                 width: isActive
                   ? screenWidth >= 768
@@ -125,7 +125,7 @@ export default function Services() {
                 src={service.image}
                 alt={`Service ${service.id}`}
                 fill
-                className="object-cover transition-transform duration-300"
+                className="object-cover transition-transform duration-300 "
               />
 
               {isActive && (

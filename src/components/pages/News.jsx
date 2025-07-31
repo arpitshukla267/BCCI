@@ -14,7 +14,9 @@ export default function News() {
     <section className="max-w-[1400px] mt-20 mx-auto px-4 sm:px-6 overflow-hidden">
       {/* Heading */}
       <div className="flex justify-center mt-4 mb-4">
-        <div className="bg-orange-500 text-white font-extrabold text-lg sm:text-xl py-2 px-6 sm:px-7 rounded">
+        <div className="md:bg-orange-500 md:text-white inline-block text-orange-400 mt-5 font-extrabold text-lg sm:text-xl py-2 px-6 sm:px-7 md:rounded  mb-4 after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-500 after:mx-auto after:mt-0 after:rounded-full">
+                
+
           News
         </div>
       </div>

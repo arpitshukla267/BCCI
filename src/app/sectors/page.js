@@ -34,8 +34,8 @@ function page() {
       </div>
 
       {/* All 36 sectors */}
-      <div className="min-h-screen lg:px-18 md:px-10 px-3 py-8 bg-white">
-        <div className="flex flex-row justify-center items-center gap-6 px-3">
+      <div className="min-h-screen lg:px-18 md:px-10 px-3 py-0 md:py-0 bg-white">
+        <div className="flex flex-row justify-center items-center gap-2 md:gap-6 px-3">
          <div className='flex md:flex-row flex-col flex-1 justify-center items-center gap-6 self-start'>
           <div className='flex flex-1 flex-col self-start items-start justify-start gap-4'>
             {sectors.map((sector, index) =>

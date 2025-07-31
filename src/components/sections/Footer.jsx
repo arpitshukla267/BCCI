@@ -109,7 +109,7 @@ function Footer() {
         {/* Navigation Links */}
         <div className="flex flex-col items-center lg:items-start text-white gap-3">
           <h1 className="text-xl font-semibold">Chamber</h1>
-          <ul className="flex flex-col gap-1">
+          <ul className="flex flex-col gap-1 items-center">
             <Link href="/" className="hover:underline">Home</Link>
             <Link href="/about" className="hover:underline">About Us</Link>
             <Link href="/services" className="hover:underline">Services</Link>

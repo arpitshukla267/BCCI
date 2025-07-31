@@ -73,7 +73,7 @@ function Page() {
 
               {/* Back Side */}
               <div className="flip-card-back p-4">
-                <p className="lg:text-sm md:text-xs text-white">{card.description}</p>
+                <p className="lg:text-sm md:text-xs text-sm text-white">{card.description}</p>
               </div>
             </div>
           </div>
