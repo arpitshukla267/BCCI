@@ -36,7 +36,7 @@ export default function ContactPage() {
           {Array.from({ length: 20 }).map((_, i) => (
             <div
               key={i}
-              className="w-80 h-[35rem] bg-orange-500 rounded-xl shadow-md flex-shrink-0"
+              className="w-80 md:h-[35rem] h-[25rem] bg-orange-500 rounded-xl shadow-md flex-shrink-0"
             />
           ))}
         </div>
