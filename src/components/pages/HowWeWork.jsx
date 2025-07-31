@@ -104,7 +104,7 @@ export default function HowWeWork() {
                   height={64}
                   className="md:mb-4 mb-1 md:max-w-60 max-w-40 object-contain"
                 />
-                <h3 className="md:text-xl text-md bg-orange-500 text-white font-semibold rounded-b-[100rem] md:min-h-[7.5rem] min-h-[5.5rem] md:px-15 px-10 md:py-5 py-3">
+                <h3 className="md:text-xl w-45 text-md bg-orange-500 text-white font-semibold rounded-b-[100rem] md:min-h-[7.5rem] min-h-[6rem] md:px-15 px-10 md:py-5 py-4">
                   {card.title}
                 </h3>
               </div>
