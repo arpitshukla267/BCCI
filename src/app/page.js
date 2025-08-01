@@ -1,11 +1,11 @@
 import About from "@/components/sections/About";
 import Hero from "@/components/sections/Hero";
-import Newz from "@/components/pages/News";
-import HowWeWork from "@/components/pages/HowWeWork";
+import Newz from "@/components/sections/News";
+import HowWeWork from "@/components/sections/HowWeWork";
 import Sectors from "@/components/sections/Sectors";
 import Services from "@/components/sections/Services";
 import Footer from "@/components/sections/Footer";
-import OfficeBariers from "@/components/pages/OfficeBariers";
+import OfficeBariers from "@/components/sections/OfficeBariers";
 import ContactPage from "./contact/page";
 
 export default function Home() {

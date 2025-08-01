@@ -5,6 +5,63 @@ import { useEffect, useRef } from 'react';
 export default function ContactPage() {
   const scrollRef = useRef(null);
 
+  const contact = [
+    {
+      img:"/contact1.jpg",
+    },
+    {
+      img:"/contact2.jpg",
+    },
+    {
+      img:"/contact3.jpg",
+    },
+    {
+      img:"/contact4.jpg",
+    },
+    {
+      img:"/contact6.jpg",
+    },
+    {
+      img:"/contact7.jpg",
+    },
+    {
+      img:"/contact8.jpg",
+    },
+    {
+      img:"/contact9.jpg",
+    },
+    {
+      img:"/contact10.jpg",
+    },
+    {
+      img:"/contact11.jpg",
+    },
+    {
+      img:"/contact12.jpg",
+    },
+    {
+      img:"/contact13.jpg",
+    },
+    {
+      img:"/contact14.jpg",
+    },
+    {
+      img:"/contact15.jpg",
+    },
+    {
+      img:"/contact16.jpg",
+    },
+    {
+      img:"/contact17.jpg",
+    },
+    {
+      img:"/contact19.jpg",
+    },
+    {
+      img:"/contact20.jpg",
+    },
+  ]
+
   useEffect(() => {
     const scrollContainer = scrollRef.current;
     if (!scrollContainer) return;
@@ -33,12 +90,17 @@ export default function ContactPage() {
           ref={scrollRef}
           className="flex flex-row justify-center items-center gap-6 overflow-x-scroll whitespace-nowrap xl:mt-35 lg:mt-25 md:mt15 no-scrollbar "
         >
-          {Array.from({ length: 20 }).map((_, i) => (
-            <div
-              key={i}
-              className="w-80 md:h-[35rem] h-[25rem] bg-orange-500 rounded-xl shadow-md flex-shrink-0"
-            />
-          ))}
+         {contact.map((item, i) => (
+           <div
+             key={i}
+             className="w-80 md:h-[35rem] h-[25rem] bg-orange-500 rounded-xl shadow-md flex-shrink-0"
+             style={{
+               backgroundImage: `url(${item.img})`,
+               backgroundSize: "cover",
+               backgroundPosition: "center",
+             }}
+           />
+         ))}
         </div>
       </div>
 
@@ -53,7 +115,9 @@ export default function ContactPage() {
                 priority
               />
           </div> */}
-        <h2 className="text-2xl font-bold text-orange-400 underline mb-26">Contact Us</h2>
+<       h1 className=" inline-block text-4xl font-extrabold text-orange-500  mb-10 after:content-[''] after:block after:h-[5px] after:w-[60%] after:bg-orange-500 after:mx-auto after:mt-1 after:rounded-full">
+          Contact Us
+        </h1>        
         <form className="space-y-4">
           <input
             type="text"

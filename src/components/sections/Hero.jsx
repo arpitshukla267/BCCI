@@ -112,7 +112,7 @@ export default function Hero() {
               <div
                 key={i}
                 onClick={() => setIndex(i)}
-                className={`h-3 w-3 rounded-full cursor-pointer ${
+                className={`md:h-3 md:w-3 w-2 h-2 rounded-full cursor-pointer ${
                   i === index ? "bg-orange-500" : "bg-gray-300"
                 }`}
               />

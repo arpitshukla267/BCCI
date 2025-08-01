@@ -7,19 +7,13 @@ import { motion } from "framer-motion";
 
 function Page() {
   const media = [
-    { img: "/mediabottom-1.png", description: "Collaboration with HDFC Bank on Loan Drive" },
-    { img: "/mediabottom-2.png", description: "Collaboration with HDFC Bank on Loan Drive" },
-    { img: "/mediabottom-3.png", description: "Collaboration with HDFC Bank on Loan Drive" },
-    { img: "/mediabottom-1.png", description: "Collaboration with HDFC Bank on Loan Drive" },
-    { img: "/mediabottom-2.png", description: "Collaboration with HDFC Bank on Loan Drive" },
-    { img: "/mediabottom-3.png", description: "Collaboration with HDFC Bank on Loan Drive" },
-    { img: "/mediabottom-1.png", description: "Collaboration with HDFC Bank on Loan Drive" },
-    { img: "/mediabottom-2.png", description: "Collaboration with HDFC Bank on Loan Drive" },
-    { img: "/mediabottom-3.png", description: "Collaboration with HDFC Bank on Loan Drive" },
-    { img: "/mediabottom-1.png", description: "Collaboration with HDFC Bank on Loan Drive" },
-    { img: "/mediabottom-2.png", description: "Collaboration with HDFC Bank on Loan Drive" },
-    { img: "/mediabottom-3.png", description: "Collaboration with HDFC Bank on Loan Drive" },
-  ];
+    { img: "/mediabottom-1.jpg", description: "Collaboration with HDFC Bank on Loan Drive" },
+    { img: "/mediabottom-2.jpg", description: "Collaboration with HDFC Bank on Loan Drive" },
+    { img: "/mediabottom-3.jpg", description: "Collaboration with HDFC Bank on Loan Drive" },
+    { img: "/mediabottom-4.jpg", description: "Collaboration with HDFC Bank on Loan Drive" },
+    { img: "/mediabottom-5.jpg", description: "Collaboration with HDFC Bank on Loan Drive" },
+    { img: "/mediabottom-6.jpg", description: "Collaboration with HDFC Bank on Loan Drive" },
+      ];
 
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [expanded, setExpanded] = useState(false);
@@ -38,7 +32,7 @@ function Page() {
       </div>
 
       {/* Top Static Row */}
-      <div className="flex flex-col md:flex-row justify-center items-center gap-9 px-4 md:mt-10 mb-10">
+      <div className="flex flex-col md:flex-row justify-center items-center gap-12 px-4 md:mt-10 mb-10">
         {/* First Box */}
         <div className="flex flex-col md:flex-row items-center bg-white p-0 rounded-2xl shadow-xl max-w-3xl w-full md:w-auto h-auto md:h-[258px]">
           <Image
@@ -63,7 +57,7 @@ function Page() {
         {/* Second Box */}
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden w-full md:w-[300px] h-[300px]">
           <Image
-            src="/Newz1.png"
+            src="/mediabottom-7.jpg"
             alt="Collaboration"
             width={300}
             height={200}
@@ -80,13 +74,13 @@ function Page() {
         initial={{ height: 390 }}
         animate={{ height: expanded ? "auto" : 390 }}
         transition={{ duration: 1.8, ease: [0.25, 0.8, 0.25, 1] }}
-        className="relative px-4 md:px-20 w-full mt-20 mb-10 overflow-hidden"
+        className="relative px-4 md:px-20 w-full mt-20 mb-10 overflow-x-hidden no-scrollbar"
       >
         <div
           className={`${
             expanded
-              ? "flex flex-row flex-wrap justify-center w-full gap-1 md:gap-6"
-              : "animate-marquee whitespace-nowrap flex gap-4 sm:gap-8 "
+              ? "flex flex-row flex-wrap justify-center gap-1 md:gap-15"
+              : "animate-marquee whitespace-nowrap py-6 flex gap-4 sm:gap-8 h-fit"
           }`}
         >
           {media.map((card, index) => (
@@ -94,16 +88,16 @@ function Page() {
               key={index}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
-              className="bg-white flex-shrink-0 hover:bg-orange-400 hover:cursor-pointer text-black hover:text-white rounded-2xl shadow-lg w-[190px] sm:w-[280px] md:w-[300px] h-[250px] flex flex-col justify-center items-center overflow-hidden transition-transform duration-300 ease-in-out group"
+              className="bg-white flex-shrink-0 hover:bg-orange-400 hover:cursor-pointer text-black hover:text-white rounded-2xl shadow-lg w-[190px] sm:w-[280px] md:w-[300px] h-[260px] hover:scale-105 flex flex-col justify-center items-center overflow-hidden transition-transform duration-300 ease-in-out group"
             >
               {/* Image */}
-              <div className="relative h-[75%] w-full md:ml-4 mt-2 p-2">
+              <div className="relative h-[75%] w-full p-2 group-hover:p-3">
                 <Image
                   src={card.img}
                   alt={`Media ${index + 1}`}
                   width={1000}
                   height={1000}
-                  className="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-105 rounded-xl transition-transform duration-300"
                 />
               </div>
 
@@ -116,7 +110,7 @@ function Page() {
         </div>
 
         {/* Toggle Button */}
-        <div className="flex justify-center items-center mt-10">
+        <div className="flex justify-center items-center mt-3">
           <button
             onClick={() => {
               if (expanded) {
@@ -126,7 +120,7 @@ function Page() {
                 setExpanded(true);
               }
             }}
-            className="bg-orange-500 hover:bg-orange-600 transition-all duration-300 text-white text-lg md:text-xl font-semibold rounded-full px-6 py-2 mt-6 shadow-md"
+            className="bg-orange-500 hover:cursor-pointer hover:bg-orange-600 transition-all duration-300 text-white text-lg md:text-xl font-semibold rounded-full px-6 py-2 mt-6 shadow-md"
           >
             {expanded ? "Show Less" : "View All"}
           </button>

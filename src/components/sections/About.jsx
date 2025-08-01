@@ -4,9 +4,9 @@ import React from "react";
 
 export default function About() {
   return (
-    <section className="w-full h-screen flex items-start justify-center bg-cover bg-center bg-no-repeat mx-auto p-5 md:p-14 md:mt-10 " 
+    <section className="w-full h-screen flex items-start justify-center bg-cover bg-center bg-no-repeat mx-auto md:p-14 md:mt-10 " 
     style={{ backgroundImage: "url('/about.jpeg')" }}>
-      <div className="max-w-full w-full px-6 z-2">
+      <div className="max-w-full w-full px-6 p-1 z-2">
         <h2 className="md:text-5xl text-4xl font-extrabold text-orange-600 border-b-4 border-orange-600 inline-block mb-5">
           About Us
         </h2>
@@ -21,7 +21,7 @@ export default function About() {
           our journey.
         </p>
 
-        <div className="flex flex-wrap justify-between items-center gap-8 ml-5">
+        <div className="flex flex-wrap justify-center md:justify-between items-center gap-8 md:ml-5">
           {features.map(({ icon, title, desc }) => (
             <div key={title} className="text-center w-64">
               <img src={icon} alt={title} className="mx-auto md:mb-5" />

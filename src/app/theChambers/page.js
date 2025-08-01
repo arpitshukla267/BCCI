@@ -33,20 +33,19 @@ function Page() {
       <div className="px-10">
         {/* Hero Section */}
         <div
-          className="hidden w-full min-h-[400px] lg:flex flex-col items-center justify-center bg-cover bg-center"
-          style={{ backgroundImage: "url('/theChamber.png')" }}
-        ></div>
-
-        <div
-          className="block w-full mt-30 lg:hidden text-center text-orange-500 text-3xl sm:text-xl font-bold p-10 bg-white relative "
+          className="hidden w-full min-h-[400px] lg:flex flex-col rounded-2xl items-center justify-center bg-cover bg-center"
+          style={{ backgroundImage: "url('/theChamber.jpg')" }}
         >
-          BCCI Office Chamber
         </div>
       </div>
+
       <div className='hidden xl:flex absolute left-0 w-full'>
        <div className='absolute left-[-5.5rem] top-[10rem] text-black rotate-270 text-3xl tracking-wide'>Connect with us</div>
        <div className='h-[20rem] w-1 rounded-4xl bg-black absolute left-10'></div>
       </div>
+      
+      <h1 className="hidden md:block text-7xl text-center mt-18 text-orange-500 font-extrabold animate-bounce">The Chamber</h1>
+
      <div className="relative"> 
         <div className="block absolute left-[-5rem] top-[3rem] opacity-50 z-0 pointer-events-none rotate-[250deg]">
             <Image
@@ -59,6 +58,9 @@ function Page() {
             />
         </div>
         
+        <h1 className=" inline-block md:text-4xl text-2xl w-full font-bold md:font-extrabold text-orange-500 text-center mt-40 md:mb-10 mb-10 after:content-[''] after:block after:h-[5px] after:w-[30%] md:after:w-[15%] after:bg-orange-500 after:mx-auto after:mt-0 md:after:mt-1 after:rounded-full">
+          BCCI Office Bearers
+        </h1>
 
       {/* ✅ Zigzag Members */}
       <div className="relative w-full lg:px-40 lg:mt-10 lg:space-y-[-80px] space-y-8">
@@ -108,7 +110,7 @@ function Page() {
         ))}
       </div>
      </div> 
-     <div className="relative overflow-hidden mb-10">
+     <div className="relative overflow-hidden mb-10 lg:mb-[-8rem]">
         <div className=" overflow-hidden mt-20">
             <div className="hidden md:block absolute left-[-4rem] top-[8rem] opacity-50 z-0 pointer-events-none rotate-[270deg]">
               <Image
@@ -120,7 +122,10 @@ function Page() {
                 priority
               />
             </div> 
-            <h1 className="text-center text-orange-400 underline mt-15 text-3xl">Executive Member</h1>
+            <h1 className=" inline-block md:text-4xl text-2xl w-full font-bold md:font-extrabold text-orange-500 text-center mt-10 md:mb-0  after:content-[''] after:block after:h-[5px] after:w-[30%] md:after:w-[15%] after:bg-orange-500 after:mx-auto after:mt-0 md:after:mt-1 after:rounded-full">
+                Executive Members
+            </h1>
+
             <div className="md:overflow-hidden overflow-x-auto w-full md:mt-8 z-5 mt-2 no-scrollbar">
               <div className="flex animate-marquee space-x-6 z-5 p-20 ">
                 {executive.map((member, index) => (
@@ -168,7 +173,9 @@ function Page() {
                 priority
               />
             </div>
-            <h1 className="text-center text-orange-400 underline lg:my-5 text-3xl">Committee Member</h1>
+            <h1 className=" inline-block md:text-4xl text-2xl w-full font-bold md:font-extrabold text-orange-500 text-center md:mt-0 md:mb-0 after:content-[''] after:block after:h-[5px] after:w-[30%] md:after:w-[15%] after:bg-orange-500 after:mx-auto after:mt-0 md:after:mt-1 after:rounded-full">
+                Committee Members
+            </h1>       
             <div className="md:overflow-hidden overflow-x-auto w-full md:mt-8 mt-2 z-5 no-scrollbar">
               <div className="flex animate-marquee space-x-6 z-5 p-20">
                 {executive.map((member, index) => (
@@ -216,8 +223,10 @@ function Page() {
                 priority
               />
             </div> */}
-            <h1 className="text-center text-orange-400 underline lg:my-5 text-3xl">BCCI Office Bearers</h1>
-            <div className="md:overflow-hidden overflow-x-auto w-full md:mt-8 mt-2 z-5 no-scrollbar">
+            <h1 className=" inline-block md:text-4xl text-2xl w-full font-bold md:font-extrabold text-orange-500 text-center md:mb-0  after:content-[''] after:block after:h-[5px] after:w-[30%] md:after:w-[15%] after:bg-orange-500 after:mx-auto after:mt-0 md:after:mt-1 after:rounded-full">
+                BCCI Office Bearers
+            </h1>
+            <div className="md:overflow-hidden overflow-x-auto w-full mb-10 lg:mb-0 md:mt-5 mt-2 z-5 no-scrollbar">
               <div className="flex animate-marquee space-x-6 z-5 p-20">
                 {executive.map((member, index) => (
                   <div key={index} className="flex-shrink-0 group">

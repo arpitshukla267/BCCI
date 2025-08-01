@@ -28,7 +28,7 @@ function Nav() {
       {/* Top Section */}
       <div className="flex justify-between items-center px-4 md:px-10 pt-4 relative">
         {/* Left Logo */}
-        <div className="w-[80px] sm:w-[120px] md:w-[150px]">
+        <div className="w-[80px] sm:w-[120px] md:w-[130px]">
           <a href="/"><img src="/logo.png" alt="logo" className="w-full h-full object-contain" /></a>
         </div>
 
@@ -79,7 +79,7 @@ function Nav() {
           <Link href="/services">Services</Link>
           <Link href="/sectors">Sectors</Link>
           <Link href="/memberZone">Member's Zone</Link>
-          <li>International Publication</li>
+          <Link href="/internationalPublication">International Publication</Link>
           <Link href="/media">Media</Link>        
         </ul>
       </div>
@@ -101,7 +101,7 @@ function Nav() {
               <Link href="/services" className="border-b border-white border-b-[1px] pb-2 mt-[-5px]" >Services</Link>
               <Link href="/sectors" className="border-b border-white border-b-[1px] pb-2 mt-[-5px]">Sectors</Link>
               <Link href="/memberZone" className="border-b border-white border-b-[1px] pb-2 mt-[-5px]">Member's Zone</Link>
-              <li className="border-b border-white border-b-[1px] pb-2 mt-[-5px]">International Publication</li>
+              <Link href="/internationalPublication" className="border-b border-white border-b-[1px] pb-2 mt-[-5px]">International Publication</Link>
               <Link href="/media" className="mt-[-5px]">Media</Link>        
             </ul>
           </motion.div>
