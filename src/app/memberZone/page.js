@@ -26,7 +26,7 @@ function page() {
             </h1>
         </div>
 
-        <div className='flex justify-center items-center h-[40vh] text-2xl text-gray-500'>Member's List In Process......</div>
+        <div className='flex justify-center items-center h-[40vh] text-2xl text-gray-500'>Member&rsquo;s List In Process......</div>
       </div>
         <div>
           <Footer />

@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion , AnimatePresence } from "framer-motion";
 
-export default function HowWeWork() {
+export default function HowWeWork() {   
   const cards = [
     {
       title: <>Networking <br /> Events</>,
