@@ -3,10 +3,12 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 
 const services = [
   {
     id: 1,
+    slug: 'visa-recommendation',
     title: (
       <>
         Visa <br /> Recommendation
@@ -16,6 +18,7 @@ const services = [
   },
   {
     id: 2,
+    slug: 'investment-matchmaking',
     title: (
       <>
         Investment <br /> Matchmaking
@@ -25,6 +28,7 @@ const services = [
   },
   {
     id: 3,
+    slug: 'business-recommendation',
     title: (
       <>
         Business <br /> Recommendation
@@ -34,6 +38,7 @@ const services = [
   },
   {
     id: 4,
+    slug: 'economic-growth',
     title: (
       <>
         Economic <br /> Growth
@@ -42,6 +47,7 @@ const services = [
     image: '/services4.jpeg',
   },
 ];
+
 
 export default function Services() {
   const [activeId, setActiveId] = useState(null);
@@ -107,7 +113,7 @@ export default function Services() {
               onMouseLeave={() => {
                 if (screenWidth >= 768) setActiveId(null);
               }}
-              className="group relative rounded-2xl overflow-hidden md:h-[560px] h-[360px] shadow-md bg-white transition-all duration-300 cursor-pointer mx-auto"
+              className="group relative rounded-2xl overflow-hidden md:h-[560px] h-[360px] shadow-md bg-white transition-all duration-300 mb-10 cursor-pointer mx-auto"
               style={{
                 width: isActive
                   ? screenWidth >= 768
@@ -129,16 +135,22 @@ export default function Services() {
               />
 
               {isActive && (
-                <motion.div
-                  layoutId="orange-button"
-                  className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-gradient-to-br from-orange-400 to-orange-700 text-white font-semibold text-center rounded-xl shadow-xl pointer-events-none px-0 py-2 overflow-hidden"
-                  initial={{ width: 0, opacity: 0 }}
-                  animate={{ width: 200, opacity: 1 }}
-                  exit={{ width: 0, opacity: 0 }}
-                  transition={{ type: 'spring', stiffness: 200, damping: 30 }}
+                <Link
+                  href={`/services/${service.slug}`}
+                  className="absolute bottom-4 left-1/2 -translate-x-1/2"
                 >
-                  {service.title}
-                </motion.div>
+                  <motion.div
+                    layoutId="orange-button"
+                    className="bg-gradient-to-br from-orange-400 to-orange-700 text-white font-semibold text-center rounded-xl shadow-xl px-6 py-2 overflow-hidden"
+                    initial={{ width: 0, opacity: 0 }}
+                    animate={{ width: 200, opacity: 1 }}
+                    exit={{ width: 0, opacity: 0 }}
+                    transition={{ type: "spring", stiffness: 200, damping: 30 }}
+                  >
+                    {service.title}
+                  </motion.div>
+                </Link>
+
               )}
             </motion.div>
           );

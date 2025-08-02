@@ -76,7 +76,7 @@ function Nav() {
       <div className="hidden md:flex w-full bg-[#F15A24] py-3 rounded-tl-3xl rounded-br-3xl px-4 sm:px-10">
         <ul className="flex lg:justify-around items-center w-full uppercase text-white lg:font-semibold md:justify-between text-sm sm:text-base">
           <Link href="/theChambers">The Chambers</Link>
-          <Link href="/services">Services</Link>
+          <Link href="/servicesPage">Services</Link>
           <Link href="/sectors">Sectors</Link>
           <Link href="/memberZone">Member's Zone</Link>
           <Link href="/internationalPublication">International Publication</Link>
@@ -98,7 +98,7 @@ function Nav() {
           >
             <ul className="flex flex-col gap-4 text-white uppercase font-semibold text-sm py-4">
               <Link href="/theChambers" className="border-b border-white border-b-[1px] pb-1">The Chamber</Link>
-              <Link href="/services" className="border-b border-white border-b-[1px] pb-2 mt-[-5px]" >Services</Link>
+              <Link href="/servicesPage" className="border-b border-white border-b-[1px] pb-2 mt-[-5px]" >Services</Link>
               <Link href="/sectors" className="border-b border-white border-b-[1px] pb-2 mt-[-5px]">Sectors</Link>
               <Link href="/memberZone" className="border-b border-white border-b-[1px] pb-2 mt-[-5px]">Member's Zone</Link>
               <Link href="/internationalPublication" className="border-b border-white border-b-[1px] pb-2 mt-[-5px]">International Publication</Link>

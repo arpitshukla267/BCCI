@@ -60,9 +60,11 @@ body {
     animation: fade-in-up 0.5s ease-out forwards;
   }
 }
+
 .flip-card {
   perspective: 1000px;
   height: 400px;
+  overflow: visible; /* <-- This is the fix */
 }
 
 .flip-card-inner {
@@ -101,6 +103,31 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: visible !important;
+
+}
+
+.floating-label {
+  position: absolute;
+  top: -1.5rem;
+  background-color: #f97316;
+  color: white;
+  padding: 6px 18px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 50;
+}
+
+.flip-card.flipped .floating-label,
+.floating-label.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @keyframes marquee {
