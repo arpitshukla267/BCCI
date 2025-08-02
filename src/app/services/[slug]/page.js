@@ -9,21 +9,19 @@ const serviceData = {
     description: (
       <>
         <p>
-          The Bundelkhand Chamber issues Visa Recommendation Letters to representatives of organizations wishing to travel overseas for the promotion of business and other related activities. Certain embassies/countries request for certification of visa application by the recognized chambers. The Bundelkhand Chamber visa documentation helps in processing the visas of member and non-member firms.
+          {"The Bundelkhand Chamber issues Visa Recommendation Letters to representatives of organizations wishing to travel overseas for the promotion of business and other related activities. Certain embassies/countries request for certification of visa application by the recognized chambers. The Bundelkhand Chamber visa documentation helps in processing the visas of member and non-member firms."}
         </p>
         <p className="mt-4">
-          The firms desirous of obtaining recommendation letters for the issue of visas are requested to furnish the following documents to the Bundelkhand Chamber at the time of applying:
+          {"The firms desirous of obtaining recommendation letters for the issue of visas are requested to furnish the following documents to the Bundelkhand Chamber at the time of applying:"}
         </p>
         <ul className="list-disc pl-6 mt-2 space-y-1">
           <li>
-            Request letter addressed to President of the Bundelkhand Chamber, on the original letterhead of the firm (application format to be obtained from the Recommendation Department of Bundelkhand Chamber).
+            {"Request letter addressed to President of the Bundelkhand Chamber, on the original letterhead of the firm (application format to be obtained from the Recommendation Department of Bundelkhand Chamber)."}
           </li>
-          <li>Photocopy of the passport of the person applying for the visa.</li>
-          <li>Photocopy of the invitation letter received from the country to be visited.</li>
-          <li>The request letter should be signed by the person applying for the visa.</li>
-          <li>
-            All photocopies must be certified with signature and stamp of the person signing the application.
-          </li>
+          <li>{"Photocopy of the passport of the person applying for the visa."}</li>
+          <li>{"Photocopy of the invitation letter received from the country to be visited."}</li>
+          <li>{"The request letter should be signed by the person applying for the visa."}</li>
+          <li>{"All photocopies must be certified with signature and stamp of the person signing the application."}</li>
         </ul>
       </>
     ),
@@ -34,22 +32,13 @@ const serviceData = {
     description: (
       <>
         <p>
-            The Bundelkhand Chamber provides customized investment facilitation services to the corporate sector. These include, among other things, providing specific product information, identification of joint venture partners, facilitating procedural matters with the respective authorities, matchmaking, etc.         </p>
-        <p className="mt-4">
-            Bundelkhand Chamber intends to emerge as one-stop centre providing investment-related information and services. Apart from providing information related to business matchmaking to interested companies, the Chamber thus, has been instrumental in creating real platforms for establishing business-to-business linkages, through various Buyer-Seller Meets, One-on-One Investor meetings, etc. Through its linkages and partnerships with Trade & Industry Associations from rest of Asia, and the World, the Bundelkhand Chamber, can truly act as an effective mediator between OTHER Corporates from India and abroad. 
-            <br />This Department is headed by DHIRAJ KHULLAR
+          {"The Bundelkhand Chamber provides customized investment facilitation services to the corporate sector. These include, among other things, providing specific product information, identification of joint venture partners, facilitating procedural matters with the respective authorities, matchmaking, etc."}
         </p>
-        {/* <ul className="list-disc pl-6 mt-2 space-y-1">
-          <li>
-            Request letter addressed to President of the Bundelkhand Chamber, on the original letterhead of the firm (application format to be obtained from the Recommendation Department of Bundelkhand Chamber).
-          </li>
-          <li>Photocopy of the passport of the person applying for the visa.</li>
-          <li>Photocopy of the invitation letter received from the country to be visited.</li>
-          <li>The request letter should be signed by the person applying for the visa.</li>
-          <li>
-            All photocopies must be certified with signature and stamp of the person signing the application.
-          </li>
-        </ul> */}
+        <p className="mt-4">
+          {"Bundelkhand Chamber intends to emerge as one-stop centre providing investment-related information and services. Apart from providing information related to business matchmaking to interested companies, the Chamber thus, has been instrumental in creating real platforms for establishing business-to-business linkages, through various Buyer-Seller Meets, One-on-One Investor meetings, etc. Through its linkages and partnerships with Trade & Industry Associations from rest of Asia, and the World, the Bundelkhand Chamber, can truly act as an effective mediator between OTHER Corporates from India and abroad."}
+          <br />
+          {"This Department is headed by DHIRAJ KHULLAR"}
+        </p>
       </>
     ),
   },
@@ -59,25 +48,21 @@ const serviceData = {
     description: (
       <>
         <p>
-            The Bundelkhand Chamber issues visa recommendation letters to representatives
-            of organizations wishing to travel overseas for the promotion of business and
-            other related activities. Certain embassies/countries request for certification of
-            visa application by the recognized Chambers. The Bundelkhand Chamber Visa
-            Documentation helps in processing the visas of member and non-member firms.
+          {"The Bundelkhand Chamber issues visa recommendation letters to representatives of organizations wishing to travel overseas for the promotion of business and other related activities. Certain embassies/countries request for certification of visa application by the recognized Chambers. The Bundelkhand Chamber Visa Documentation helps in processing the visas of member and non-member firms."}
         </p>
         <p className="mt-4">
-            The firms desirous of obtaining recommendation letters for the issue of visas are
-            requested to furnish the following documents to the Bundelkhand Chamber at
-            the time of applying:
+          {"The firms desirous of obtaining recommendation letters for the issue of visas are requested to furnish the following documents to the Bundelkhand Chamber at the time of applying:"}
         </p>
         <ul className="list-disc pl-6 mt-2 space-y-1">
-          <li>Request letter addressed to President of the Bundelkhand Chamber, on the original letterhead of the firm (application format to be obtained from the Recommendation Department of Bundelkhand Chamber) </li>
-          <li>Photocopy of the passport of the person applying for the visa.</li>
-          <li>Photocopy of the invitation letter received from the country to be visited.</li>
-          <li>The request letter should be signed by person applying for the visa.</li>
-          <li>All photocopies must be certified with signature and stamp of the person</li>
+          <li>
+            {"Request letter addressed to President of the Bundelkhand Chamber, on the original letterhead of the firm (application format to be obtained from the Recommendation Department of Bundelkhand Chamber)"}
+          </li>
+          <li>{"Photocopy of the passport of the person applying for the visa."}</li>
+          <li>{"Photocopy of the invitation letter received from the country to be visited."}</li>
+          <li>{"The request letter should be signed by person applying for the visa."}</li>
+          <li>{"All photocopies must be certified with signature and stamp of the person"}</li>
         </ul>
-        <p>Signing The Application</p>
+        <p>{"Signing The Application"}</p>
       </>
     ),
   },
@@ -87,27 +72,25 @@ const serviceData = {
     description: (
       <>
         <p>
-          The Bundelkhand Chamber issues Visa Recommendation Letters to representatives of organizations wishing to travel overseas for the promotion of business and other related activities. Certain embassies/countries request for certification of visa application by the recognized chambers. The Bundelkhand Chamber visa documentation helps in processing the visas of member and non-member firms.
+          {"The Bundelkhand Chamber issues Visa Recommendation Letters to representatives of organizations wishing to travel overseas for the promotion of business and other related activities. Certain embassies/countries request for certification of visa application by the recognized chambers. The Bundelkhand Chamber visa documentation helps in processing the visas of member and non-member firms."}
         </p>
         <p className="mt-4">
-          The firms desirous of obtaining recommendation letters for the issue of visas are requested to furnish the following documents to the Bundelkhand Chamber at the time of applying:
+          {"The firms desirous of obtaining recommendation letters for the issue of visas are requested to furnish the following documents to the Bundelkhand Chamber at the time of applying:"}
         </p>
         <ul className="list-disc pl-6 mt-2 space-y-1">
           <li>
-            Request letter addressed to President of the Bundelkhand Chamber, on the original letterhead of the firm (application format to be obtained from the Recommendation Department of Bundelkhand Chamber).
+            {"Request letter addressed to President of the Bundelkhand Chamber, on the original letterhead of the firm (application format to be obtained from the Recommendation Department of Bundelkhand Chamber)."}
           </li>
-          <li>Photocopy of the passport of the person applying for the visa.</li>
-          <li>Photocopy of the invitation letter received from the country to be visited.</li>
-          <li>The request letter should be signed by the person applying for the visa.</li>
-          <li>
-            All photocopies must be certified with signature and stamp of the person signing the application.
-          </li>
+          <li>{"Photocopy of the passport of the person applying for the visa."}</li>
+          <li>{"Photocopy of the invitation letter received from the country to be visited."}</li>
+          <li>{"The request letter should be signed by the person applying for the visa."}</li>
+          <li>{"All photocopies must be certified with signature and stamp of the person signing the application."}</li>
         </ul>
       </>
     ),
   },
-  // You can add more slugs here like 'investment-matchmaking': { ... }
 };
+
 
 export default function ServiceDetail({ params }) {
   const service = serviceData[params.slug];
