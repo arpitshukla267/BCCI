@@ -39,21 +39,21 @@ const features = [
   {
     icon: "https://img.icons8.com/ios-filled/64/000000/handshake.png",
     title: "Trusted Business",
-    desc: "We Deliver success to your<br/>business.",
+    desc: "We Deliver success to your business.",
   },
   {
     icon: "https://img.icons8.com/ios-filled/64/000000/rocket.png",
     title: "Expertise In Action",
-    desc: "We assist our clients to set<br/>right strategy.",
+    desc: "We assist our clients to set right strategy.",
   },
   {
     icon: "https://img.icons8.com/ios-filled/64/000000/prize.png",
     title: "Recognized Excellence",
-    desc: "We see challenges as<br/>opportunities.",
+    desc: "We see challenges as opportunities.",
   },
   {
     icon: "https://img.icons8.com/ios-filled/64/000000/help.png",
     title: "Always Ready To Help",
-    desc: "We Deliver success to your<br/>business.",
+    desc: "We Deliver success to your business.",
   },
 ];
