@@ -3,10 +3,10 @@ import Nav from "@/components/sections/Nav";
 import Image from "next/image";
 
 const serviceData = {
-  "visa-recommendation": {
-    title: "Visa Recommendation",
-    image: "/services1.jpeg",
-    description: (
+ "visa-recommendation": {
+  title: "Visa Recommendation",
+  image: "/services1.jpeg",
+  description: (
       <>
         <p>
           {"The Bundelkhand Chamber issues Visa Recommendation Letters to representatives of organizations wishing to travel overseas for the promotion of business and other related activities. Certain embassies/countries request for certification of visa application by the recognized chambers. The Bundelkhand Chamber visa documentation helps in processing the visas of member and non-member firms."}
@@ -26,6 +26,7 @@ const serviceData = {
       </>
     ),
   },
+
   "investment-matchmaking": {
     title: "Investment Matchmaking",
     image: "/services2.jpeg",

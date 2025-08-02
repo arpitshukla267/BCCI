@@ -24,7 +24,7 @@ function Page() {
       name: 'Visa-Recommendation',
       img: '/services3.jpeg',
       description:
-        'The Bundelkhand Chamber issues visa recommendation letters to representatives traveling abroad for business purposes, as some embassies require certification from recognized chambers. This service is available to both member and non-member firms. To apply, firms must submit a request letter (on official letterhead) addressed to the Chamber President, a photocopy of the applicant’s passport, the invitation letter from the visiting country, and the applicant’s signature on the request. All documents must be certified with the applicant’s signature and stamp.',
+        'The Bundelkhand Chamber issues visa recommendation letters to representatives traveling abroad for business purposes, as some embassies require certification from recognized chambers. This service is available to both member and non-member firms. To apply, firms must submit a request letter (on official letterhead) addressed to the Chamber President, a photocopy of the applicant passport, the invitation letter from the visiting country, and the applicant signature on the request. All documents must be certified with the applicant signature and stamp.',
     },
   ];
 
