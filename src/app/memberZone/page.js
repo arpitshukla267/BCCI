@@ -22,7 +22,7 @@ function page() {
 
         <div className="text-center md:mt-10 mt-40">
             <h1 className=" inline-block md:hidden text-4xl font-extrabold text-orange-500  mb-10 after:content-[''] after:block after:h-[5px] after:w-[60%] after:bg-orange-500 after:mx-auto after:mt-1 after:rounded-full">
-              Member's Zone
+              Member&rsquo;s Zone
             </h1>
         </div>
 
