@@ -24,7 +24,7 @@ function Page() {
       name: 'Visa-Recommendation',
       img: '/services3.jpeg',
       description:
-        'The Bundelkhand Chamber issues visa recommendation letters to representatives traveling abroad for business purposes, as some embassies require certification from recognized chambers. This service is available to both member and non-member firms. To apply, firms must submit a request letter (on official letterhead) addressed to the Chamber President, a photocopy of the applicant passport, the invitation letter from the visiting country, and the applicant signature on the request. All documents must be certified with the applicant signature and stamp.',
+        'The Bundelkhand Chamber issues visa recommendation letters to representatives traveling abroad for business purposes, as some embassies require certification from recognized chambers. This service is available to both member and non-member firms. To apply, firms must submit a request letter (on official letterhead) addressed to the Chamber President, a photocopy of the applicant’s passport, the invitation letter from the visiting country, and the applicant’s signature on the request. All documents must be certified with the applicant’s signature and stamp.',
     },
   ];
 
@@ -68,26 +68,22 @@ function Page() {
 
       {/* Cards Section */}
       <div className='md:px-10 xl:px-0 lg:mb-[-7rem] md:mb-0 mb-30'>
-        <div className="w-full max-w-6xl mx-auto py-2 px-10 md:px-0 md:py-12 grid md:grid-cols-3 gap-10">
+        <div className="w-full max-w-6xl mx-auto py-2 px-10 md:px-0 md:py-12 grid md:grid-cols-3 gap-15 lg:gap-10">
           {cards.map((card, index) => (
             <div
               key={index}
               className={`flip-card hover:scale-115 transition-transform duration-300 ${flippedIndex === index ? 'flipped' : ''}`}
             >
-
-                {/* 🔶 Floating Heading on All Cards */}
-             <div
-               className={`absolute -top-10 left-1/2 -translate-x-1/2 flex flex-col items-center text-center transition-all duration-500 z-50 ${
-                 flippedIndex === index ? 'opacity-100 scale-125' : 'opacity-0 scale-95'
-               }`}
-             >
-               <div className="bg-orange-400 text-white px-4 py-1 rounded-md font-semibold text-sm shadow-lg">
-                 {card.name.replace(/-/g, ' ').toLowerCase()}
-               </div>
-               <div className="w-3 h-3 bg-orange-400 rotate-45 -mt-1"></div>
-             </div>
-
               <div className="flip-card-inner flex flex-col relative">
+                
+                {/* 🔶 Floating Heading on All Cards */}
+                <div
+                  className={`floating-label ${
+                    flippedIndex === index ? 'show' : ''
+                  }`}
+                >
+                  {card.name.replace(/-/g, ' ').toLowerCase()}
+                </div>
 
                 {/* Front Side */}
                 <div className="flip-card-front lg:p-5 md:p-2">

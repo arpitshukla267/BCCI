@@ -38,7 +38,7 @@ const sectorsData = [
 export default function Sectors() {
   return (
   <section className="w-full max-h-fit bg-white px-4 md:px-16 py-0 mb-[-2rem] md:mb-[-5rem] relative overflow-hidden">
-    <h1 className=" inline-block text-4xl w-full font-extrabold text-orange-500 text-center after:content-[''] after:block after:h-[5px] after:w-[26%] md:after:w-[6%] after:bg-orange-500 after:mx-auto after:mt-1 after:rounded-full">
+    <h1 className=" inline-block text-4xl w-full font-extrabold text-orange-500 text-center after:content-[''] after:block after:h-[5px] after:w-[26%] md:after:w-[6%] after:bg-orange-500 after:mx-auto after:mt-0 after:rounded-full">
       Sectors
     </h1>
 

@@ -95,7 +95,7 @@ export default function Services() {
         <div className="absolute inset-0 bg-white/60 backdrop-blur-sm" />
       </div>
 
-      <h1 className=" inline-block text-4xl z-9 relative mt-15 mb-25 w-full font-extrabold text-orange-500 text-center after:content-[''] after:block after:h-[5px] after:w-[26%] md:after:w-[6%] after:bg-orange-500 after:mx-auto after:mt-1 after:rounded-full">
+      <h1 className=" inline-block text-4xl z-9 relative mt-15 mb-25 w-full font-extrabold text-orange-500 text-center after:content-[''] after:block after:h-[5px] after:w-[26%] md:after:w-[6%] after:bg-orange-500 after:mx-auto after:mt-0 after:rounded-full">
         Services
       </h1>
 

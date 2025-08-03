@@ -110,6 +110,8 @@ body {
 .floating-label {
   position: absolute;
   top: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px) rotateY(180deg);
   background-color: #f97316;
   color: white;
   padding: 6px 18px;
@@ -117,8 +119,7 @@ body {
   border-bottom-right-radius: 12px;
   font-weight: 600;
   font-size: 0.9rem;
-  opacity: 0;
-  transform: translateY(-10px);
+  opacity: 0 !important;
   transition: opacity 0.5s ease, transform 0.5s ease;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   z-index: 50;
@@ -127,7 +128,19 @@ body {
 .flip-card.flipped .floating-label,
 .floating-label.show {
   opacity: 1;
-  transform: translateY(0);
+  /* transform: translateX(-50%) translateY(0) rotateY(180deg); */
+}
+
+/* Additional selector to ensure visibility when card is flipped */
+.flip-card.flipped .floating-label {
+  opacity: 1 !important;
+  /* transform: translateX(-50%) translateY(0) rotateY(-180deg) !important; */
+}
+
+/* Show floating label on hover as well */
+.flip-card:hover .floating-label {
+  opacity: 1 !important;
+  /* transform: translateX(-50%) translateY(0) rotateY(-180deg) !important; */
 }
 
 @keyframes marquee {
@@ -155,3 +168,6 @@ body {
   scrollbar-width: none;     /* Firefox */
 }
 
+body {
+  font-family: var(--font-poppins);
+}

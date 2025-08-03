@@ -126,7 +126,7 @@ function Page() {
                 Executive Members
             </h1>
 
-            <div className="md:overflow-hidden overflow-x-auto w-full md:mt-8 z-5 mt-2 no-scrollbar">
+            <div className="md:overflow-hidden overflow-x-auto w-full md:mt-0 z-5 mt-2 no-scrollbar">
               <div className="flex animate-marquee space-x-6 z-5 p-20 ">
                 {executive.map((member, index) => (
                   <div key={index} className="flex-shrink-0 group">
@@ -176,7 +176,7 @@ function Page() {
             <h1 className=" inline-block md:text-4xl text-2xl w-full font-bold md:font-extrabold text-orange-500 text-center md:mt-0 md:mb-0 after:content-[''] after:block after:h-[5px] after:w-[30%] md:after:w-[15%] after:bg-orange-500 after:mx-auto after:mt-0 md:after:mt-1 after:rounded-full">
                 Committee Members
             </h1>       
-            <div className="md:overflow-hidden overflow-x-auto w-full md:mt-8 mt-2 z-5 no-scrollbar">
+            <div className="md:overflow-hidden overflow-x-auto w-full md:mt-0 mt-2 z-5 no-scrollbar">
               <div className="flex animate-marquee space-x-6 z-5 p-20">
                 {executive.map((member, index) => (
                  <div key={index} className="flex-shrink-0 group">
@@ -226,7 +226,7 @@ function Page() {
             <h1 className=" inline-block md:text-4xl text-2xl w-full font-bold md:font-extrabold text-orange-500 text-center md:mb-0  after:content-[''] after:block after:h-[5px] after:w-[30%] md:after:w-[15%] after:bg-orange-500 after:mx-auto after:mt-0 md:after:mt-1 after:rounded-full">
                 BCCI Office Bearers
             </h1>
-            <div className="md:overflow-hidden overflow-x-auto w-full mb-10 lg:mb-0 md:mt-5 mt-2 z-5 no-scrollbar">
+            <div className="md:overflow-hidden overflow-x-auto w-full mb-10 lg:mb-0 md:mt-0 mt-2 z-5 no-scrollbar">
               <div className="flex animate-marquee space-x-6 z-5 p-20">
                 {executive.map((member, index) => (
                   <div key={index} className="flex-shrink-0 group">

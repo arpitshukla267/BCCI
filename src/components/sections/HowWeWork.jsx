@@ -71,7 +71,7 @@ export default function HowWeWork() {
 
       {/* ✨ Main content */}
       <div className="relative z-10 ">
-        <h1 className=" inline-block text-4xl w-full font-extrabold text-orange-500 text-center mt-10 md:mb-30 after:content-[''] after:block after:h-[5px] after:w-[45%] md:after:w-[12%] after:bg-orange-500 after:mx-auto after:mt-1 after:rounded-full">
+        <h1 className=" inline-block text-4xl w-full font-extrabold text-orange-500 text-center mt-10 md:mb-30 after:content-[''] after:block after:h-[5px] after:w-[45%] md:after:w-[12%] after:bg-orange-500 after:mx-auto after:mt-0 after:rounded-full">
           How We Work
         </h1>
 
