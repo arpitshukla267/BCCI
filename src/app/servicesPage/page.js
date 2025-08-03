@@ -3,7 +3,6 @@ import React from 'react';
 import Nav from '@/components/sections/Nav';
 import Image from 'next/image';
 import Footer from '@/components/sections/Footer';
-import { useSearchParams } from 'next/navigation';
 import { useState, useEffect } from 'react';
 
 function Page() {
@@ -28,18 +27,8 @@ function Page() {
     },
   ];
 
-  const searchParams = useSearchParams();
-  const selectedSlug = searchParams.get('selected');
+ 
   const [flippedIndex, setFlippedIndex] = useState(null);
-
-  useEffect(() => {
-    if (selectedSlug) {
-      const index = cards.findIndex((card) =>
-        card.name.toLowerCase().includes(selectedSlug.replace(/-/g, ' '))
-      );
-      if (index !== -1) setFlippedIndex(index);
-    }
-  }, [selectedSlug]);
 
   return (
     <div className='h-auto'>
@@ -68,7 +57,7 @@ function Page() {
 
       {/* Cards Section */}
       <div className='md:px-10 xl:px-0 lg:mb-[-7rem] md:mb-0 mb-30'>
-        <div className="w-full max-w-6xl mx-auto py-2 px-10 md:px-0 md:py-12 grid md:grid-cols-3 gap-15 lg:gap-10">
+        <div className="w-full max-w-6xl mx-auto py-2 px-10 md:px-0 md:py-12 grid md:grid-cols-3 gap-15 lg:gap">
           {cards.map((card, index) => (
             <div
               key={index}
@@ -103,7 +92,7 @@ function Page() {
 
                 {/* Back Side */}
                 <div className="flip-card-back relative flex flex-col items-center justify-center text-center px-4 pb-4">
-                  <p className="text-white text-sm max-w-[90%] leading-relaxed">
+                  <p className="text-white text-xs max-w-[90%] leading-relaxed">
                     {card.description}
                   </p>
                 </div>
