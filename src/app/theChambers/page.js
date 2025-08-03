@@ -47,7 +47,7 @@ function Page() {
       <h1 className="hidden md:block text-7xl text-center mt-18 text-orange-500 font-extrabold animate-bounce">The Chamber</h1>
 
      <div className="relative"> 
-        <div className="block absolute left-[-5rem] top-[3rem] opacity-50 z-0 pointer-events-none rotate-[250deg]">
+        <div className="block absolute lg:left-[-5rem] md:top-[3rem] top-[15rem] left-[-7rem] opacity-50 z-0 pointer-events-none rotate-[250deg]">
             <Image
               src="/bg.png"
               alt="Background Watermark"
@@ -126,8 +126,8 @@ function Page() {
                 Executive Members
             </h1>
 
-            <div className="md:overflow-hidden overflow-x-auto w-full md:mt-0 z-5 mt-2 no-scrollbar">
-              <div className="flex animate-marquee space-x-6 z-5 p-20 ">
+            <div className="md:overflow-hidden overflow-x-auto w-full md:mt-0 z-5 mt-0 no-scrollbar">
+              <div className="flex animate-marquee space-x-6 z-5 md:p-20 py-10 mb-15 md:mb-0">
                 {executive.map((member, index) => (
                   <div key={index} className="flex-shrink-0 group">
                     <div className="relative w-32 h-32 rounded-full border bg-white border-gray-300 overflow-hidden transform transition-transform duration-300 group-hover:scale-125">
@@ -176,8 +176,8 @@ function Page() {
             <h1 className=" inline-block md:text-4xl text-2xl w-full font-bold md:font-extrabold text-orange-500 text-center md:mt-0 md:mb-0 after:content-[''] after:block after:h-[5px] after:w-[30%] md:after:w-[15%] after:bg-orange-500 after:mx-auto after:mt-0 md:after:mt-1 after:rounded-full">
                 Committee Members
             </h1>       
-            <div className="md:overflow-hidden overflow-x-auto w-full md:mt-0 mt-2 z-5 no-scrollbar">
-              <div className="flex animate-marquee space-x-6 z-5 p-20">
+            <div className="md:overflow-hidden overflow-x-auto w-full md:mt-0 mt-0 z-5 no-scrollbar">
+              <div className="flex animate-marquee space-x-6 z-5 md:p-20 p-10 mb-15 md:mb-0">
                 {executive.map((member, index) => (
                  <div key={index} className="flex-shrink-0 group">
                    <div className="relative w-32 h-32 rounded-full border bg-white border-gray-300 overflow-hidden transform transition-transform duration-300 group-hover:scale-125">
@@ -226,8 +226,8 @@ function Page() {
             <h1 className=" inline-block md:text-4xl text-2xl w-full font-bold md:font-extrabold text-orange-500 text-center md:mb-0  after:content-[''] after:block after:h-[5px] after:w-[30%] md:after:w-[15%] after:bg-orange-500 after:mx-auto after:mt-0 md:after:mt-1 after:rounded-full">
                 BCCI Office Bearers
             </h1>
-            <div className="md:overflow-hidden overflow-x-auto w-full mb-10 lg:mb-0 md:mt-0 mt-2 z-5 no-scrollbar">
-              <div className="flex animate-marquee space-x-6 z-5 p-20">
+            <div className="md:overflow-hidden overflow-x-auto w-full mb-10 lg:mb-0 md:mt-0 mt-0 z-5 no-scrollbar">
+              <div className="flex animate-marquee space-x-6 z-5 md:p-20 p-10">
                 {executive.map((member, index) => (
                   <div key={index} className="flex-shrink-0 group">
                     <div className="relative w-32 h-32 rounded-full border border-gray-300 overflow-hidden transform transition-transform duration-300 group-hover:scale-125">

@@ -21,12 +21,12 @@ function page() {
         </div>
 
         <div className="text-center md:mt-10 mt-40">
-            <h1 className=" inline-block md:hidden text-4xl font-extrabold text-orange-500  mb-10 after:content-[''] after:block after:h-[5px] after:w-[60%] after:bg-orange-500 after:mx-auto after:mt-1 after:rounded-full">
+            <h1 className=" inline-block md:hidden text-3xl md:text-4xl font-extrabold text-orange-500  mb-10 after:content-[''] after:block md:after:h-[5px] after:h-[4px] after:w-[60%] after:bg-orange-500 after:mx-auto after:mt-0 after:rounded-full">
               Member&rsquo;s Zone
             </h1>
         </div>
 
-        <div className='flex justify-center items-center h-[40vh] text-2xl text-gray-500'>Member&rsquo;s List In Process......</div>
+        <div className='flex justify-center items-center h-[40vh] text-lg md:text-2xl text-gray-500'>Member&rsquo;s List In Process......</div>
       </div>
         <div>
           <Footer />

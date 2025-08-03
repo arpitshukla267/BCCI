@@ -83,7 +83,7 @@ export default function ContactPage() {
   }, []);
 
   return (
-    <div className="flex flex-col md:flex-row min-h-screen bg-gray-100">
+    <div className="flex flex-col md:flex-row min-h-fit bg-gray-100">
       {/* Left auto-scrolling section */}
       <div className="w-full md:w-1/2 p-4 overflow-hidden">
         <div

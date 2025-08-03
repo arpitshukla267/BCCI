@@ -5,7 +5,7 @@ import { FaFacebook, FaYoutube, FaInstagram } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className="relative w-full h-auto flex flex-col overflow-hidden mt-[-4rem]">
+    <div className="relative w-full min-h-fit flex flex-col overflow-hidden">
       
       {/* Left banner */}
       <div className="hidden flex-1 lg:flex justify-center">

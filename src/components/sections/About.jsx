@@ -4,16 +4,16 @@ import React from "react";
 
 export default function About() {
   return (
-    <section className="w-full h-screen flex items-start justify-center bg-cover bg-center bg-no-repeat mx-auto md:p-14 md:mt-10 " 
+    <section className="w-full min-h-screen flex items-start justify-center bg-cover bg-center bg-no-repeat mx-auto md:p-14 md:mt-10 " 
     style={{ backgroundImage: "url('/about.jpeg')" }}>
       <div className="max-w-full w-full px-6 p-1 z-2">
-        <h2 className="md:text-5xl text-4xl font-extrabold text-orange-600 border-b-4 border-orange-600 inline-block mb-5">
+        <h2 className="md:text-5xl text-4xl font-extrabold text-orange-600 border-b-4 border-orange-600 inline-block mb-5 mt-10">
           About Us
         </h2>
         <h1 className="md:text-5xl text-2xl font-extrabold text-gray-800 mb-6 leading-snug">
           Discover Our Story Of <br /> Success
         </h1>
-        <p className="text-xl text-gray-600 leading-7 mb-12">
+        <p className="text-lg text-gray-600 leading-7 mb-12">
           From humble beginnings to industry leadership, we’ve taken bold steps
           <br />
           towards excellence. Join us in our ongoing pursuit of innovation.
