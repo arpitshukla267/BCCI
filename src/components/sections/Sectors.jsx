@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useInView } from "react-intersection-observer";
+
 
 const sectorsData = [
   {
@@ -36,11 +38,22 @@ const sectorsData = [
 ];
 
 export default function Sectors() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
   return (
-  <section className="w-full max-h-fit bg-white px-4 md:px-16 py-0 mb-[-2rem] md:mb-[-5rem] relative overflow-hidden">
-    <h1 className=" inline-block text-4xl w-full font-extrabold text-orange-500 text-center after:content-[''] after:block after:h-[5px] after:w-[26%] md:after:w-[6%] after:bg-orange-500 after:mx-auto after:mt-0 after:rounded-full">
+  <section className="w-full min-h-fit bg-white px-4 md:px-16 py-0 mb-[-2rem] md:mb-[-5rem] relative overflow-hidden">
+    <motion.h1
+      ref={ref}
+      initial={{ opacity: 0, y: 20 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+      className="inline-block text-4xl w-full font-extrabold text-orange-500 text-center after:content-[''] after:block after:h-[5px] after:w-[26%] md:after:w-[6%] after:bg-orange-500 after:mx-auto after:mt-0 after:rounded-full"
+    >
       Sectors
-    </h1>
+    </motion.h1>
 
   <div className="absolute right-[-58rem] inset-0 opacity-20 z-0 pointer-events-none">
     <Image

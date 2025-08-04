@@ -13,26 +13,43 @@ function Page() {
     { img: "/mediabottom-4.jpg", description: "Collaboration with HDFC Bank on Loan Drive" },
     { img: "/mediabottom-5.jpg", description: "Collaboration with HDFC Bank on Loan Drive" },
     { img: "/mediabottom-6.jpg", description: "Collaboration with HDFC Bank on Loan Drive" },
-      ];
+  ];
 
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [expanded, setExpanded] = useState(false);
+
+  const fadeIn = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
 
   return (
     <div>
       <div>
         <Nav />
       </div>
-      
+
       {/* Heading */}
-      <div className="text-center md:mt-10 mt-45">
-        <h1 className=" inline-block text-4xl font-extrabold text-orange-500  mb-10 after:content-[''] after:block after:h-[5px] after:w-[60%] after:bg-orange-500 after:mx-auto after:mt-1 after:rounded-full">
+      <motion.div
+        variants={fadeIn}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="text-center md:mt-10 mt-45"
+      >
+        <h1 className="inline-block text-4xl font-extrabold text-orange-500 mb-10 after:content-[''] after:block after:h-[5px] after:w-[60%] after:bg-orange-500 after:mx-auto after:mt-1 after:rounded-full">
           Media
         </h1>
-      </div>
+      </motion.div>
 
       {/* Top Static Row */}
-      <div className="flex flex-col md:flex-row justify-center items-center gap-12 px-4 md:mt-10 mb-10">
+      <motion.div
+        variants={fadeIn}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="flex flex-col md:flex-row justify-center items-center gap-12 px-4 md:mt-10 mb-10"
+      >
         {/* First Box */}
         <div className="flex flex-col md:flex-row items-center bg-white p-0 rounded-2xl shadow-xl max-w-3xl w-full md:w-auto h-auto md:h-[258px]">
           <Image
@@ -67,25 +84,33 @@ function Page() {
             Collaboration With HDFC Bank On Loan Drive
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Bottom Section */}
       <motion.div
         initial={{ height: 390 }}
         animate={{ height: expanded ? "auto" : 390 }}
-        transition={{ duration: 1.8, ease: [0.25, 0.8, 0.25, 1] }}
-        className="relative px-4 md:px-20 w-full mt-20 mb-10 overflow-x-hidden no-scrollbar"
+        transition={{ duration: 0.8, ease: [0.25, 0.8, 0.25, 1] }}
+        className="relative px-4 md:px-20 w-full mt-20 mb-10 lg:mb-0 overflow-x-hidden no-scrollbar"
       >
-        <div
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeIn}
+          viewport={{ once: true }}
           className={`${
             expanded
-              ? "flex flex-row flex-wrap justify-center gap-1 md:gap-15"
+              ? "lg:flex lg:flex-row lg:flex-wrap lg:justify-center grid grid-cols-2 gap-x-1 gap-y-5 mx-auto md:gap-15"
               : "animate-marquee whitespace-nowrap py-6 flex gap-4 sm:gap-8 h-fit"
           }`}
         >
           {media.map((card, index) => (
-            <div
+            <motion.div
               key={index}
+              variants={fadeIn}
+              whileInView="visible"
+              initial="hidden"
+              viewport={{ once: true }}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
               className="bg-white flex-shrink-0 hover:bg-orange-400 hover:cursor-pointer text-black hover:text-white rounded-2xl shadow-lg w-[190px] sm:w-[280px] md:w-[300px] h-[260px] hover:scale-105 flex flex-col justify-center items-center overflow-hidden transition-transform duration-300 ease-in-out group"
@@ -105,12 +130,18 @@ function Page() {
               <div className="h-[25%] px-4 text-center text-wrap flex items-center justify-center text-sm font-medium">
                 {card.description}
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Toggle Button */}
-        <div className="flex justify-center items-center mt-3">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeIn}
+          viewport={{ once: true }}
+          className="flex justify-center items-center mt-3"
+        >
           <button
             onClick={() => {
               if (expanded) {
@@ -124,10 +155,17 @@ function Page() {
           >
             {expanded ? "Show Less" : "View All"}
           </button>
-        </div>
+        </motion.div>
       </motion.div>
 
-      <Footer />
+      <motion.div
+        variants={fadeIn}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <Footer />
+      </motion.div>
     </div>
   );
 }

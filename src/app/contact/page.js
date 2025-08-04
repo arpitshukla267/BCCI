@@ -1,9 +1,13 @@
 'use client';
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 export default function ContactPage() {
   const scrollRef = useRef(null);
+  const { ref: headingRef, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const ref = useRef(null);
 
   const contact = [
     {
@@ -88,7 +92,7 @@ export default function ContactPage() {
       <div className="w-full md:w-1/2 p-4 overflow-hidden">
         <div
           ref={scrollRef}
-          className="flex flex-row justify-center items-center gap-6 overflow-x-scroll whitespace-nowrap xl:mt-35 lg:mt-25 md:mt15 no-scrollbar "
+          className="flex flex-row justify-center items-center gap-6 overflow-x-scroll whitespace-nowrap no-scrollbar "
         >
          {contact.map((item, i) => (
            <div
@@ -115,45 +119,58 @@ export default function ContactPage() {
                 priority
               />
           </div> */}
-<       h1 className=" inline-block text-4xl font-extrabold text-orange-500  mb-10 after:content-[''] after:block after:h-[5px] after:w-[60%] after:bg-orange-500 after:mx-auto after:mt-1 after:rounded-full">
+        <motion.h1
+          ref={headingRef}
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          className="inline-block text-4xl w-full mb-8 font-extrabold text-orange-500 text-center after:content-[''] after:block after:h-[5px] after:w-[26%] md:after:w-[18%] after:bg-orange-500 after:mx-auto after:mt-0 after:rounded-full"
+        >
           Contact Us
-        </h1>        
-        <form className="space-y-4">
-          <input
-            type="text"
-            placeholder="Name"
-            required
-            className="w-full p-3 border text-black bg-orange-200 rounded-tl-xl border-none rounded-br-xl focus:outline-none focus:ring-1 focus:ring-orange-500"
-          />
+        </motion.h1>
 
-          <div className="flex flex-col sm:flex-row gap-4">
-            <input
-              type="email"
-              placeholder="E-Mail"
-              required
-              className="w-full p-3 text-black bg-orange-200 rounded-tl-xl border-none rounded-br-xl focus:outline-none focus:ring-2 focus:ring-orange-500"
-            />
-            <input
-              type="text"
-              placeholder="Phone"
-              required
-              className="w-full p-3 text-black bg-orange-200 rounded-tl-xl border-none rounded-br-xl focus:outline-none focus:ring-2 focus:ring-orange-500"
-            />
-          </div>
+ <motion.form
+      ref={ref}
+      initial={{ opacity: 0, y: 30 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8, ease: 'easeOut' }}
+      className="space-y-4"
+    >
+      <input
+        type="text"
+        placeholder="Name"
+        required
+        className="w-full p-3 border text-black bg-orange-200 rounded-tl-xl border-none rounded-br-xl focus:outline-none focus:ring-1 focus:ring-orange-500"
+      />
 
-          <textarea
-            placeholder="Type Message"
-            required
-            className="w-full p-3 text-black h-62 bg-orange-200 rounded-tl-xl border-none rounded-br-xl resize-none focus:outline-none focus:ring-2 focus:ring-orange-500"
-          />
+      <div className="flex flex-col sm:flex-row gap-4">
+        <input
+          type="email"
+          placeholder="E-Mail"
+          required
+          className="w-full p-3 text-black bg-orange-200 rounded-tl-xl border-none rounded-br-xl focus:outline-none focus:ring-2 focus:ring-orange-500"
+        />
+        <input
+          type="text"
+          placeholder="Phone"
+          required
+          className="w-full p-3 text-black bg-orange-200 rounded-tl-xl border-none rounded-br-xl focus:outline-none focus:ring-2 focus:ring-orange-500"
+        />
+      </div>
 
-          <button
-            type="submit"
-            className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-md font-semibold"
-          >
-            Send
-          </button>
-        </form>
+      <textarea
+        placeholder="Type Message"
+        required
+        className="w-full p-3 text-black h-62 bg-orange-200 rounded-tl-xl border-none rounded-br-xl resize-none focus:outline-none focus:ring-2 focus:ring-orange-500"
+      />
+
+      <button
+        type="submit"
+        className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-md font-semibold"
+      >
+        Send
+      </button>
+    </motion.form>
       </div>
 
       <style jsx>{`

@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
+import { useInView } from "react-intersection-observer";
+
 
 const services = [
   {
@@ -68,6 +70,11 @@ export default function Services() {
     }
   };
 
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
   return (
     <section className="relative min-h-screen mt-20 mb-20 px-4 overflow-hidden">
       {/* Dynamic Background */}
@@ -95,9 +102,15 @@ export default function Services() {
         <div className="absolute inset-0 bg-white/60 backdrop-blur-sm" />
       </div>
 
-      <h1 className=" inline-block text-4xl z-9 relative mt-15 mb-25 w-full font-extrabold text-orange-500 text-center after:content-[''] after:block after:h-[5px] after:w-[26%] md:after:w-[6%] after:bg-orange-500 after:mx-auto after:mt-0 after:rounded-full">
+    <motion.h1
+      ref={ref}
+      initial={{ opacity: 0, y: 20 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+      className=" inline-block text-4xl z-9 relative mt-15 mb-25 w-full font-extrabold text-orange-500 text-center after:content-[''] after:block after:h-[5px] after:w-[26%] md:after:w-[6%] after:bg-orange-500 after:mx-auto after:mt-1 after:rounded-full"
+    >  
         Services
-      </h1>
+    </motion.h1>
 
       <div className="relative z-10 gap-4 flex flex-col flex-wrap items-center md:flex-row lg:gap-0 lg:px-20 justify-center">
         {services.map((service) => {
