@@ -33,7 +33,7 @@ function page() {
 
       {/* Black line at left */}
       <div className="hidden xl:flex absolute left-0 w-full">
-        <div className="absolute left-[-5.5rem] top-[13rem] text-black rotate-270 text-3xl tracking-wide">
+        <div className="absolute left-[-6.5rem] top-[13rem] text-black rotate-270 text-3xl tracking-wide">
           Connect with us
         </div>
         <div className="h-[20rem] w-1 rounded-4xl bg-black absolute left-10 top-[4rem]"></div>

@@ -91,7 +91,7 @@ function Page() {
         initial={{ height: 390 }}
         animate={{ height: expanded ? "auto" : 390 }}
         transition={{ duration: 0.8, ease: [0.25, 0.8, 0.25, 1] }}
-        className="relative px-4 md:px-20 w-full mt-20 mb-10 lg:mb-0 overflow-x-hidden no-scrollbar"
+        className="relative md:px-20 w-full mt-20 mb-10 lg:mb-0 overflow-x-hidden no-scrollbar"
       >
         <motion.div
           initial="hidden"
@@ -100,7 +100,7 @@ function Page() {
           viewport={{ once: true }}
           className={`${
             expanded
-              ? "lg:flex lg:flex-row lg:flex-wrap lg:justify-center grid grid-cols-2 gap-x-1 gap-y-5 mx-auto md:gap-15"
+              ? "lg:flex lg:flex-row lg:flex-wrap lg:justify-center grid grid-cols-2 gap-x-0 gap-y-5  md:gap-15"
               : "animate-marquee whitespace-nowrap py-6 flex gap-4 sm:gap-8 h-fit"
           }`}
         >

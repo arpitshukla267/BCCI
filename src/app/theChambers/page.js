@@ -99,7 +99,7 @@ function Page() {
                     />
                   </div>
                   <div className="relative bg-orange-500 text-white lg:px-6 px-3 py-2 lg:py-4 rounded-lg lg:max-w-[400px] max-w-[150px]">
-                    <p className="lg:text-md text-xs font-semibold">{member.name}</p>
+                    <div className="lg:text-md text-xs font-semibold">{member.name}</div>
                     <div className="absolute top-1/2 left-[-10px] transform -translate-y-1/2 w-0 h-0 border-t-8 border-b-8 border-r-8 border-r-orange-500 border-t-transparent border-b-transparent"></div>
                   </div>
                 </div>
