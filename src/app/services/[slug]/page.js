@@ -1,6 +1,8 @@
 import Footer from "@/components/sections/Footer";
 import Nav from "@/components/sections/Nav";
 import Image from "next/image";
+import { motion } from 'framer-motion';
+
 
 const serviceData = {
  "visa-recommendation": {

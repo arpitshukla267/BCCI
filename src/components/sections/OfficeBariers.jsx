@@ -2,52 +2,75 @@
 import React from 'react';
 import Image from 'next/image';
 
-function OfficeBearers() {
+const OfficeBearers = () => {
   const members = [
-    { src: '/ob3amit.png', alt: 'Amit', zIndex: 10, height: 'h-[30rem]', scale: 'scale-160', mt: 'mt-2' },     // Leftmost
-    { src: '/ob4kapil.png', alt: 'Kapil', zIndex: 20, height: 'h-[30rem]', scale: 'scale-170', mt: 'mt-2' },   // Middle-left
-    { src: '/obdheeraj.png', alt: 'Dheeraj', zIndex: 30, height: 'h-[30rem]', scale: 'scale-210', mt: '-mt-18' },// Center
-    { src: '/ob2pawan.png', alt: 'Pawan', zIndex: 20, height: 'h-[30rem]', scale: 'scale-180', mt: 'mt-2' },   // Middle-right
+    {
+      src: '/ob3amit.png',
+      alt: 'Amit',
+      height: 'h-[26rem]',
+      zIndex: 40,
+      name: 'Amit Sharma',
+      title: 'Vice President',
+    },
+    {
+      src: '/ob2pawan.png',
+      alt: 'Pawan',
+      height: 'h-[26rem]',
+      zIndex: 30,
+      name: 'Shubham Kumar',
+      title: 'Treasurer',
+    },
+    {
+      src: '/obdheeraj.png',
+      alt: 'Dheeraj',
+      height: 'h-[26rem]',
+      zIndex: 50,
+      name: 'Dheeraj Khullar',
+      title: 'President',
+    },
+    {
+      src: '/ob4kapil.png',
+      alt: 'Kapil',
+      height: 'h-[26rem]',
+      zIndex: 20,
+      name: 'Shrey Malik',
+      title: 'Secretary',
+    },
   ];
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-white">
-      {/* Heading */}
-      <div className="flex flex-col items-start w-fit ml-8 md:ml-20 mt-10">
-        <div className="text-orange-500 text-3xl font-semibold whitespace-nowrap">
-          BCCI Office Bearers
-        </div>
-        <div className="bg-orange-500 rounded-3xl h-1 w-full mt-1" />
-      </div>
+    <div className="flex flex-col justify-center items-center px-4 py-12 overflow-x-auto">
+      <h1 className='text-orange-400 font-semibold text-3xl mb-10'>
+        BCCI Office Bearers
+      </h1>
 
-      {/* Orange Slant Background */}
-      <div className="absolute top-1/2 z-99 translate-y-52 left-[12.5%] w-full h-[100px] bg-orange-500 -skew-x-[70deg] origin-top-right" />
-
-      {/* Image Row */}
-      <div className="relative z-10 flex justify-center items-end px-4 py-20">
-        {members.map(({ src, alt, zIndex, height, scale, mt }, index) => (
+      <div className='h-fit flex flex-row justify-baseline items-end overflow-hidden'>
+        {members.map((member, index) => (
           <div
             key={index}
-            className={`relative w-36 md:w-44 lg:w-52 ${height} ${scale} ${mt}`}
-            style={{ zIndex }}
+            className={`relative group ${member.height} flex-shrink-0 -ml-20 first:ml-0 z-[${member.zIndex}] transition-transform duration-300`}
           >
+            {/* Hover card - above image */}
+            <div className="absolute -top-20 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-orange-400 text-white text-center px-4 py-2 rounded-md w-max shadow-md pointer-events-none z-50">
+              <div className="font-bold text-lg">{member.name}</div>
+              <div className="text-sm">{member.title}</div>
+
+              {/* Triangle pointer */}
+              <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-orange-400 rotate-45"></div>
+            </div>
+
             <Image
-              src={src}
-              alt={alt}
-              fill
-              className="object-contain self-start justify-start"
-              priority
+              src={member.src}
+              alt={member.alt}
+              width={300}
+              height={600}
+              className="object-contain rounded-xl shadow-lg"
             />
           </div>
         ))}
       </div>
-
-      {/* Footer Quote */}
-      <div className="text-center text-xl md:text-3xl font-semibold text-black px-4 pb-10 mt-10 mb-10">
-        "Empowering Businesses. Building Futures."
-      </div>
     </div>
   );
-}
+};
 
 export default OfficeBearers;

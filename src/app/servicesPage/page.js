@@ -30,8 +30,15 @@ function Page() {
   const [flippedIndex, setFlippedIndex] = useState(null);
 
   const fadeIn = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 10 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+
+  const fadeInProps = {
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.6, ease: "easeOut" },
+  viewport: { once: true },
   };
 
   return (
@@ -40,14 +47,17 @@ function Page() {
 
       <div className="px-10">
         {/* Hero Section */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeIn}
+        <div
           className="hidden w-full min-h-[400px] lg:flex flex-col items-center rounded-2xl justify-center bg-cover bg-center"
           style={{ backgroundImage: "url('/servicePage.png')" }}
-        ></motion.div>
+        ></div>
+        
+         <motion.h1
+           {...fadeInProps}
+           className="inline-block md:text-7xl text-2xl w-full font-bold md:font-extrabold text-orange-500 text-center mt-10 md:mb-10 mb-10 after:content-[''] after:block after:h-[5px] after:w-[30%] md:after:w-[15%] after:bg-orange-500 after:mx-auto after:mt-0 md:after:mt-1 after:rounded-full"
+         >
+           Services
+         </motion.h1>
 
         {/* Heading */}
         <motion.div

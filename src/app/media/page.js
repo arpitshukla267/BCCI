@@ -19,7 +19,7 @@ function Page() {
   const [expanded, setExpanded] = useState(false);
 
   const fadeIn = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 10 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
 

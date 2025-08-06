@@ -156,7 +156,26 @@ body {
 .animate-marquee:hover {
   animation-play-state: paused;
 }
- 
+@keyframes marqueechamber {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marqueechamber {
+  display: flex;
+  width: fit-content;
+  animation: marqueechamber 26s linear infinite;
+}
+
+.animate-marqueechamber:hover {
+  animation-play-state: paused;
+}
+
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .no-scrollbar::-webkit-scrollbar {
   display: none;

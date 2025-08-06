@@ -3,7 +3,7 @@
 import Footer from "@/components/sections/Footer";
 import Nav from "@/components/sections/Nav";
 import React from "react";
-import { motion } from "framer-motion"; // ✅ Import Framer Motion
+import { motion } from "framer-motion"; 
 
 export default function About() {
   return (

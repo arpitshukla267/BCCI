@@ -6,7 +6,7 @@ const sectors =[
         image:"/agro-food-processing.jpg",
     },
     {
-        name: "Coal",
+        name: "Mining",
         image:"/coal.jpg",
     },
     {
@@ -35,7 +35,7 @@ const sectors =[
     },
     {
         name: "Public Sector Undertaking & Excellence Award",
-        image:"/public-sector-undertaking-excellence-award.jpeg",
+        image:"/public-sector-undertaking-excellence-award.jpg",
     },
     {
         name: "Defence Aerospace & Space Sector",
@@ -94,7 +94,7 @@ const sectors =[
         image:"/retail.jpg",
     },
     {
-        name: "Tea",
+        name: "Food Processing",
         image:"/tea.jpg",
     },
     {
@@ -121,16 +121,16 @@ const sectors =[
         name: "Minerals & Metals",
         image:"/minerals-metals.jpg",
     },
-    {
-        name: "Oil & Gas Sector",
-        image:"/oil-gas-sector.jpg",
-    },
+    // {
+    //     name: "Oil & Gas Sector",
+    //     image:"/oil-gas-sector.jpg",
+    // },
     {
         name: "Safety & Security",
         image:"/safety-security.jpg",
     },
     {
-        name: "Textile & Jute",
+        name: "Textile",
         image:"/textile-jute.jpg",
     },
     {

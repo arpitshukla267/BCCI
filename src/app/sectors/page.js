@@ -9,8 +9,15 @@ import { motion } from 'framer-motion';
 
 function page() {
   const fadeInVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 10 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+  };
+
+  const fadeInProps = {
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.6, ease: "easeOut" },
+  viewport: { once: true },
   };
 
   return (
@@ -26,9 +33,12 @@ function page() {
           style={{ backgroundImage: "url('/sectorsPage.png')" }}
         ></div>
 
-        <h1 className="inline-block md:hidden text-4xl w-full font-extrabold text-orange-500 text-center mt-40 md:mb-30 after:content-[''] after:block after:h-[5px] after:w-[25%] after:bg-orange-500 after:mx-auto after:mt-1 after:rounded-full">
+        <motion.h1
+          {...fadeInProps}
+          className="inline-block md:text-8xl text-2xl w-full font-bold md:font-extrabold text-orange-500 text-center mt-10 md:mb-10 mb-0 after:content-[''] after:block after:h-[9px] after:w-[30%] md:after:w-[15%] after:bg-orange-500 after:mx-auto after:mt-0 md:after:mt-0 after:rounded-full"
+        >
           Sectors
-        </h1>
+        </motion.h1>
       </div>
 
       {/* Black line at left */}
