@@ -55,7 +55,7 @@ export default function HowWeWork() {
   };
 
   return (
-    <div className="relative bg-transparent min-h-fit overflow-hidden pb-12 px-4 mt-[10rem] md:mt-[-5rem]">
+    <div className="relative bg-transparent min-h-screen overflow-hidden pb-12 px-4 mt-[10rem] md:mt-[-5rem]">
 
       {/* 🎨 Blurred animated background blob */}
       <div className="absolute top-[-100px] right-[-100px] w-[400px] h-[400px] bg-orange-300 rounded-full filter blur-3xl opacity-30 animate-pulse z-0 pointer-events-none" />

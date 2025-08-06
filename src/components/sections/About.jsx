@@ -17,7 +17,7 @@ export default function About() {
         initial={{ opacity: 0, y: 40 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="w-full h-screen flex items-start justify-center bg-cover bg-center bg-no-repeat mx-auto p-5 md:p-14 md:mt-10"
+        className="w-full min-h-screen flex items-start justify-center bg-cover bg-center bg-no-repeat mx-auto p-5 md:p-14 md:mt-10"
         style={{ backgroundImage: "url('/about.jpeg')" }}
       >
         <div className="max-w-full w-full px-6 z-2">

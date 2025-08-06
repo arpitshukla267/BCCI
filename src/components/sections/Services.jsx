@@ -76,7 +76,7 @@ export default function Services() {
   });
 
   return (
-    <section className="relative min-h-screen mt-20 mb-20 px-4 overflow-hidden">
+    <section className="relative min-h-screen mt-20 mb-20 mb:px-4 overflow-hidden">
       {/* Dynamic Background */}
       <div className="absolute inset-0 z-0">
         <AnimatePresence mode="wait">
@@ -133,7 +133,7 @@ export default function Services() {
                     ? '400px' // PC width when active
                     : '350px' // Mobile width when active
                   : screenWidth >= 768
-                  ? '280px'
+                  ? '260px'
                   : '220px', // Default width
                 zIndex: isActive ? 10 : 1,
               }}
