@@ -25,7 +25,7 @@ function Page() {
     {
       name: (
         <>
-          Pawan Saraogi (धीरज खुल्लर) <br />
+          Pawan Saraogi (पवन सरावगी) <br />
           <hr className="my-1 border-white" />
           General Secretary Jhansi<br /> Granite Stone Product Pvt Ltd
         </>
@@ -35,7 +35,7 @@ function Page() {
     {
       name: (
         <>
-          Amit Singh (धीरज खुल्लर) <br />
+          Amit Singh (अमित सिंह) <br />
           <hr className="my-1 border-white" />
           Joint Secretary <br /> Maa Pitambra Industries
         </>
@@ -45,7 +45,7 @@ function Page() {
     {
       name: (
         <>
-          CA Kapil Khanna (धीरज खुल्लर) <br />
+          CA Kapil Khanna (कपिल खन्ना) <br />
           <hr className="my-1 border-white" />
           Treasurer <br /> Kapil Khanna & Associates
         </>
@@ -105,7 +105,7 @@ function Page() {
 
       {/* Title */}
       <h1 className="hidden md:block text-7xl text-center mt-18 text-orange-500 font-extrabold animate-bounce">
-        The Chamber
+        The Chambers
       </h1>
 
       {/* Watermark */}
@@ -182,55 +182,55 @@ function Page() {
       </div>
 
       {/* Executive Section with Scroll Arrows */}
-<div className="relative md:mt-20">
-  <motion.h1
-    {...fadeInProps}
+      <div className="relative md:mt-20 -mt-30 mb-20 md:mb-0">
+        <motion.h1
+          {...fadeInProps}
     className="inline-block md:text-4xl text-2xl w-full font-bold md:font-extrabold text-orange-500 text-center mt-40 md:mb-10 mb-10 after:content-[''] after:block after:h-[5px] after:w-[30%] md:after:w-[15%] after:bg-orange-500 after:mx-auto after:mt-0 md:after:mt-1 after:rounded-full"
-  >
-    BCCI Office Bearers
-  </motion.h1>
-
-  <div className="relative w-full">
-    {/* Scroll Buttons */}
-    <button
-      onClick={() =>
-        scrollRef.current?.scrollBy({ left: -500, behavior: "smooth" })
-      }
-      className="absolute z-10 top-1/2 left-2 transform -translate-y-1/2 bg-gray-500 p-2 rounded-full shadow-md hover:scale-110 transition"
-    >
-      <ChevronLeft />
-    </button>
-    <button
-      onClick={() =>
-        scrollRef.current?.scrollBy({ left: 500, behavior: "smooth" })
-      }
-      className="absolute z-10 top-1/2 right-2 transform -translate-y-1/2 bg-gray-500 p-2 rounded-full shadow-md hover:scale-110 transition"
-    >
-      <ChevronRight />
-    </button>
-
-    <div
-      ref={scrollRef}
-      className="flex overflow-x-auto space-x-6 px-6 no-scrollbar scroll-smooth"
-    >
-      {executive.map((member, index) => (
-        <div key={index} className="flex-shrink-0 group">
-          <div className="relative lg:w-64 w-32 lg:h-64 h-32 mt-10 rounded-full overflow-hidden transform transition-transform duration-300 group-hover:scale-115">
-            <Image
-              src={member.img}
-              alt="executive"
-              fill
-              className="object-fit"
-            />
+        >
+          BCCI Office Bearers
+        </motion.h1>
+      
+        <div className="relative w-full">
+          {/* Scroll Buttons */}
+          <button
+            onClick={() =>
+              scrollRef.current?.scrollBy({ left: -500, behavior: "smooth" })
+            }
+            className="absolute z-10 top-1/2 left-2 transform -translate-y-1/2 bg-gray-500 p-2 rounded-full shadow-md hover:scale-110 transition"
+          >
+            <ChevronLeft />
+          </button>
+          <button
+            onClick={() =>
+              scrollRef.current?.scrollBy({ left: 500, behavior: "smooth" })
+            }
+            className="absolute z-10 top-1/2 right-2 transform -translate-y-1/2 bg-gray-500 p-2 rounded-full shadow-md hover:scale-110 transition"
+          >
+            <ChevronRight />
+          </button>
+      
+          <div
+            ref={scrollRef}
+            className="flex overflow-x-auto space-x-6 px-6 no-scrollbar scroll-smooth"
+          >
+            {executive.map((member, index) => (
+              <div key={index} className="flex-shrink-0 group">
+                <div className="relative lg:w-64 w-32 lg:h-64 h-32 md:mt-10 mt-0 rounded-full overflow-hidden transform transition-transform duration-300 group-hover:scale-115">
+                  <Image
+                    src={member.img}
+                    alt="executive"
+                    fill
+                    className="object-fit"
+                  />
+                </div>
+                <h1 className="text-nowrap text-center text-black transition-transform duration-300 group-hover:scale-110 group-hover:mt-6">
+                  {member.name}
+                </h1>
+              </div>
+            ))}
           </div>
-          <h1 className="text-nowrap text-center text-black transition-transform duration-300 group-hover:scale-110 group-hover:mt-6">
-            {member.name}
-          </h1>
         </div>
-      ))}
-    </div>
-  </div>
-</div>
+      </div>
 
 
       <Footer />

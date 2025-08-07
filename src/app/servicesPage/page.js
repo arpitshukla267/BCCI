@@ -43,8 +43,9 @@ function Page() {
 
   return (
     <div className='h-auto'>
-      <Nav />
-
+      <div>
+        <Nav />
+      </div>
       <div className="px-10">
         {/* Hero Section */}
         <div

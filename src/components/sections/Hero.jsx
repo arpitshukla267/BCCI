@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Nav from "./Nav";
+import Link from "next/link"; // ✅ Step 1: Import Link
 
 const images = [
   {
@@ -13,6 +14,7 @@ const images = [
       </>
     ),
     button: "Join Us Today",
+    link: "/membership", // ✅ Step 2: Add link
   },
   {
     src: "/hero2.jpeg",
@@ -22,6 +24,7 @@ const images = [
       </>
     ),
     button: "Become a Member",
+    link: "/join-us",
   },
   {
     src: "/hero3.jpeg",
@@ -31,6 +34,7 @@ const images = [
       </>
     ),
     button: "Explore Services",
+    link: "/services",
   },
   {
     src: "/hero1.jpeg",
@@ -40,6 +44,7 @@ const images = [
       </>
     ),
     button: "Join Us Today",
+    link: "/membership",
   },
   {
     src: "/hero2.jpeg",
@@ -49,6 +54,7 @@ const images = [
       </>
     ),
     button: "Become a Member",
+    link: "/join-us",
   },
   {
     src: "/hero3.jpeg",
@@ -58,13 +64,13 @@ const images = [
       </>
     ),
     button: "Explore Services",
+    link: "/services",
   },
 ];
 
 export default function Hero() {
   const [index, setIndex] = useState(0);
 
-  // Auto-rotate
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % images.length);
@@ -80,7 +86,6 @@ export default function Hero() {
         For<br />business.<br />For you.
       </h1>
 
-      {/* Shared Hero Section for all screen sizes with fade animation */}
       <div className="lg:px-20 md:px-10 px-5">
         <div className="relative w-full md:h-[500px] h-[400px] overflow-hidden mt-10 md:rounded-3xl rounded-sm">
           <AnimatePresence mode="wait">
@@ -101,9 +106,13 @@ export default function Hero() {
             <h1 className="text-4xl md:text-5xl font-extrabold drop-shadow-lg">
               {images[index].heading}
             </h1>
-            <button className="bg-orange-500 px-6 py-3 rounded shadow hover:bg-orange-600 w-fit">
-              {images[index].button}
-            </button>
+
+            {/* ✅ Step 3: Wrap button in Link */}
+            <Link href={images[index].link}>
+              <button className="bg-orange-500 px-6 py-3 rounded shadow hover:bg-orange-600 w-fit">
+                {images[index].button}
+              </button>
+            </Link>
           </div>
 
           {/* Dots */}

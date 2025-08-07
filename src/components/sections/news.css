@@ -9,7 +9,7 @@
   .scroll-content {
     display: flex;
     flex-direction: column;
-    animation: scroll-up 18s linear infinite;
+    animation: scroll-up 8s linear infinite;
   }
 }
 

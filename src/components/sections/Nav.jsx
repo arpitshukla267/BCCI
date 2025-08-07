@@ -79,7 +79,7 @@ function Nav() {
           <Link href="/servicesPage">Services</Link>
           <Link href="/sectors">Sectors</Link>
           <Link href="/memberZone">Member&rsquo;s Zone</Link>
-          <Link href="/internationalPublication">International Publication</Link>
+          {/* <Link href="/internationalPublication">International Publication</Link> */}
           <Link href="/media">Media</Link>        
         </ul>
       </div>
@@ -101,7 +101,7 @@ function Nav() {
               <Link href="/servicesPage" className="border-b border-white border-b-[1px] pb-2 mt-[-5px]" >Services</Link>
               <Link href="/sectors" className="border-b border-white border-b-[1px] pb-2 mt-[-5px]">Sectors</Link>
               <Link href="/memberZone" className="border-b border-white border-b-[1px] pb-2 mt-[-5px]">Member&rsquo;s Zone</Link>
-              <Link href="/internationalPublication" className="border-b border-white border-b-[1px] pb-2 mt-[-5px]">International Publication</Link>
+              {/* <Link href="/internationalPublication" className="border-b border-white border-b-[1px] pb-2 mt-[-5px]">International Publication</Link> */}
               <Link href="/media" className="mt-[-5px]">Media</Link>        
             </ul>
           </motion.div>

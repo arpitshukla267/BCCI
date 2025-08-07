@@ -1,6 +1,6 @@
 import React from "react";
 
-const sectors =[
+const sectors = [
     {
         name: "Agro Food & Processing",
         image:"/agro-food-processing.jpg",
