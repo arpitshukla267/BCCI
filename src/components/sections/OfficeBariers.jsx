@@ -14,6 +14,8 @@ const members = [
     zIndex: 10,
     left: '3rem',
     name: 'Amit Singh',
+    heading: 'Strategic Thinkers',
+    description: 'With decades of combined industry experience, our team is focused on long-term growth, smart execution, and continuous improvement.',
     title: 'Joint Secreatry',
     brightness: '50',
     hoverTop: '0rem',
@@ -30,10 +32,12 @@ const members = [
     width: '25rem',
     zIndex: 30,
     name: 'Pawan Saraogi',
+    heading: 'Driven By Results',
+    description: "Business done with values doesn't just earn profit — it earns respect too.",
     left: '-4.5rem',
     title: 'General Secreatry',
     brightness: '50',
-    hoverTop: '-36rem',
+    hoverTop: '-34rem',
     hoverLeft: '-26rem',
     pointerBottom: '-bottom-1.5',
     pointerLeft: '-right-1',
@@ -47,6 +51,8 @@ const members = [
     width: '23rem',
     zIndex: 99,
     name: 'Dheeraj Khullar',
+    heading: 'Innovative Leader',
+    description: "Business is not just about profit, it's a responsibility to society.Every day is a new opportunity — keep moving forward!",
     left: '-4.5rem',
     title: 'President',
     brightness: '50',
@@ -64,6 +70,8 @@ const members = [
     width: '25rem',
     zIndex: 20,
     name: 'Kapil Khanna',
+    heading: 'People-Centric Approach',
+    description: "Experience is the true capital — invest it in the right direction, and success will follow.",
     left: '-7.5rem',
     title: 'Treasurer',
     brightness: '50',
@@ -179,9 +187,9 @@ const fadeInProps = {
               {/* Box with description */}
               <div className="bg-orange-500 text-white rounded-xl px-6 py-4 w-fit max-w-md skew-x-[3deg] mt-2 relative z-30">
                 <div className="-skew-x-[9deg]">
-                  <h3 className="text-lg font-bold">Strategic Thinkers</h3>
+                  <h3 className="text-lg font-bold">{member.heading}</h3>
                   <p className="mt-2 text-sm font-medium leading-relaxed">
-                    With decades of combined industry experience, our team is focused on long-term growth, smart execution, and continuous improvement.
+                    {member.description}
                   </p>
                 </div>
               </div>
@@ -189,20 +197,23 @@ const fadeInProps = {
 
 
             <div
-            style={{zIndex: member.zIndex, left: member.left, width: member.width}}
-             className={`absolute bottom-0  ${member.color} min-w-[${member.width}]`}>
-                <Image
-                  src={member.src}
-                  alt={member.alt}
-                  width={300}
-                  height={600}
-                  className="object-contain  hover:brightness(100%)"
-                  style={{
-                    width: member.width,
-                    filter: `brightness(${member.brightness}%)`,
-                    // backdropFilter: grayscal
-                  }}
-                />
+              style={{
+                zIndex: member.zIndex,
+                left: member.left,
+                width: member.width,
+              }}
+              className="absolute bottom-0 group-hover:grayscale-0 min-w-[10rem]" // fallback width
+            >
+              <Image
+                src={member.src}
+                alt={member.alt}
+                width={300}
+                height={600}
+                className="object-contain grayscale group-hover:grayscale-0 transition duration-300"
+                style={{
+                  width: member.width,
+                }}
+              />
             </div>
           </div>
         ))}

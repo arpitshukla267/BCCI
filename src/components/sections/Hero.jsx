@@ -7,7 +7,7 @@ import Link from "next/link"; // ✅ Step 1: Import Link
 
 const images = [
   {
-    src: "/hero1.jpeg",
+    src: "/hero1.jpg",
     heading: (
       <>
         Empowering Businesses <br /> in Bundelkhand
@@ -37,7 +37,7 @@ const images = [
     link: "/services",
   },
   {
-    src: "/hero1.jpeg",
+    src: "/hero1.jpg",
     heading: (
       <>
         Empowering Businesses <br /> in Bundelkhand

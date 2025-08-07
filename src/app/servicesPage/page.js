@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 function Page() {
   const cards = [
     {
-      name: 'investment matchmaking',
+      name: 'Investment Matchmaking',
       img: '/services1.jpeg',
       description:
         'The Bundelkhand Chamber provides customized investment facilitation services, including product information, joint venture identification, and procedural support. It aims to be a one-stop center for investment-related assistance. The Chamber organizes B2B platforms like Buyer-Seller Meets and investor meetings. With global partnerships, it acts as a mediator between Indian and international corporates. The department is headed by Dhiraj Khullar.',

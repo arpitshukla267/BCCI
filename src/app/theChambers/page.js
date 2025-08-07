@@ -64,7 +64,7 @@ function Page() {
     { name: <>Sushil Parich</>, img: "/Sushil.png" },
     { name: <>Raju Parwar</>, img: "/Raju.png" },
     { name: <>Atul Sharma</>, img: "/Atul.png" },
-    { name: <>Rajeev Mehta</>, img: "/Rajeev.png" },
+    { name: <>Rajeev Khandelwal</>, img: "/Rajeev.png" },
     { name: <>Vijay Gupta</>, img: "/Vijay.png" },
     { name: <>Apurv Gupta</>, img: "/Apoorv.png" },
     { name: <>Sanjay Arora</>, img: "/Sanjay.png" },
@@ -72,6 +72,11 @@ function Page() {
     { name: <>Naresh Gupta</>, img: "/Naresh.jpeg" },
     { name: <>Sanjay Rai</>, img: "/Sanjay.jpeg" },
     { name: <>Vivek Jain</>, img: "/vivek.jpg" },
+    { name: <>Ajay Sijaria</>, img: "/Ajay.png" },
+    { name: <>Shiva Likdhari</>, img: "/shiva.png" },
+    { name: <>Rajeev Mehta</>, img: "/Rajeev-Mehta.png" },
+    { name: <>Ratnesh Baghel</>, img: "/Ratnesh.png" },
+    { name: <>Saurabh Gaida</>, img: "/Saurabh.png" },
   ];
 
   const fadeInProps = {
@@ -91,7 +96,7 @@ function Page() {
       <motion.div className="px-10">
         <div
           className="hidden w-full min-h-[400px] lg:flex flex-col rounded-2xl items-center justify-center bg-cover bg-center"
-          style={{ backgroundImage: "url('/theChamber.jpg')" }}
+          style={{ backgroundImage: "url('/theChamber.png')" }}
         />
       </motion.div>
 
@@ -148,7 +153,7 @@ function Page() {
                       src={member.img}
                       alt="member"
                       fill
-                      className="rounded-full object-fit border-4 border-white bg-amber-200 shadow-lg"
+                      className="rounded-full object-fit border-4 border-white bg-orange-200 shadow-lg"
                     />
                   </div>
                   <div className="relative bg-orange-500 text-white lg:px-6 px-3 py-2 lg:py-4 rounded-lg lg:max-w-[400px] max-w-[150px]">
@@ -165,7 +170,7 @@ function Page() {
                       src={member.img}
                       alt="member"
                       fill
-                      className="rounded-full object-cover border-4 bg-amber-200 border-white shadow-lg"
+                      className="rounded-full object-cover border-4 bg-orange-200 border-white shadow-lg"
                     />
                   </div>
                   <div className="relative bg-orange-500 text-white lg:px-6 px-3 py-2 m-5 lg:py-4 rounded-lg lg:max-w-[400px] max-w-[150px]">
