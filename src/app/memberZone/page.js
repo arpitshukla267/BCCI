@@ -1,7 +1,6 @@
 import React from 'react'
 import Nav from '@/components/sections/Nav'
 import Footer from '@/components/sections/Footer'
-import { motion } from 'framer-motion';
 
 
 function page() {
