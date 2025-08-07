@@ -92,7 +92,7 @@ export default function ContactPage() {
       <div className="w-full md:w-1/2 p-4 overflow-hidden">
         <div
           ref={scrollRef}
-          className="flex flex-row justify-center items-center gap-6 overflow-x-scroll whitespace-nowrap no-scrollbar "
+          className="flex flex-row justify-center h-screen items-center gap-6 overflow-x-scroll whitespace-nowrap no-scrollbar "
         >
          {contact.map((item, i) => (
            <div
