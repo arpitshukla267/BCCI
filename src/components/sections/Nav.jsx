@@ -75,6 +75,7 @@ function Nav() {
       {/* Desktop Nav */}
       <div className="hidden md:flex w-full bg-[#F15A24] py-3 rounded-tl-3xl rounded-br-3xl px-4 sm:px-10">
         <ul className="flex lg:justify-around items-center w-full uppercase text-white lg:font-semibold md:justify-between text-sm sm:text-base">
+          <Link href="/">Home</Link>
           <Link href="/theChambers">The Chambers</Link>
           <Link href="/servicesPage">Services</Link>
           <Link href="/sectors">Sectors</Link>

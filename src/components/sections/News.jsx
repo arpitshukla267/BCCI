@@ -63,7 +63,7 @@ export default function News() {
         </div>
 
         {/* Main News */}
-       <div className="w-1/2 text-center border-x-4 border-black px-8 overflow-y-auto py-8 overflow-x-hidden no-scrollbar">
+       <div className="w-1/2 text-center border-x-4 border-black px-8 py-8 overflow-y-hidden no-scrollbar">
          <img
            src="/Newz5.png"
            alt="Main"
