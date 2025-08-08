@@ -50,7 +50,7 @@ function Page() {
         {/* Hero Section */}
         <div
           className="hidden w-full min-h-[400px] lg:flex flex-col items-center rounded-2xl justify-center bg-cover bg-center"
-          style={{ backgroundImage: "url('/servicePage.png')" }}
+          style={{ backgroundImage: "url('/servicePage.jpeg')" }}
         ></div>
         
          <motion.h1

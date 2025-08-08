@@ -35,7 +35,7 @@ export default function About() {
             our journey.
           </p>
 
-          <div className="flex flex-wrap md:justify-betweenn justify-center items-center gap-8 md:ml-5">
+          <div className="flex flex-wrap md:justify-between justify-center items-center gap-8 md:ml-5">
             {features.map(({ icon, title, desc }) => (
               <div key={title} className="text-center w-64">
                 <img src={icon} alt={title} className="mx-auto md:mb-5" />

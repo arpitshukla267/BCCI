@@ -43,10 +43,10 @@ function Page() {
       </motion.div>
 
       {/* Top Static Row */}
-      <motion.div
-        variants={fadeIn}
-        initial="hidden"
-        whileInView="visible"
+      <div
+        // variants={fadeIn}
+        // initial="hidden"
+        // whileInView="visible"
         viewport={{ once: true }}
         className="flex flex-col md:flex-row justify-center items-center gap-12 px-4 md:mt-10 mb-10"
       >
@@ -57,7 +57,7 @@ function Page() {
             alt="Event"
             width={400}
             height={200}
-            className="rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none w-full md:w-auto object-cover"
+            className="rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none w-full md:h-[258px] md:w-auto object-cover"
           />
           <div className="p-4 text-left">
             <h2 className="text-xl font-semibold mb-5 text-black">New Office Bearers Took Oath</h2>
@@ -81,10 +81,10 @@ function Page() {
             className="object-cover w-full h-[70%]"
           />
           <div className="bg-orange-500 text-white p-2 text-center font-medium h-[30%] flex items-center justify-center">
-            Collaboration With HDFC Bank On Loan Drive
+            Hop & hop of Buses
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Bottom Section */}
       <motion.div

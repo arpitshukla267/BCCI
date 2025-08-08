@@ -4,9 +4,12 @@ import { HiOutlineMenuAlt3, HiOutlineX } from "react-icons/hi";
 import { RxHamburgerMenu } from "react-icons/rx";  // Add this line
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";  // Assuming you want to use Link for navigation
+import { User } from "lucide-react";
+
  // Assuming Nav is in the same directory
 
 function Nav() {
+  const [isOpen, setIsOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   useEffect(() => {
     if (menuOpen) {
@@ -39,6 +42,10 @@ function Nav() {
             <span className="text-blue-400 text-sm md:mt-[-5] sm:text-base md:text-lg">
               of commerce & industry
             </span>
+            {/* <br />
+            <span className="text-black-400 text-sm md:mt-[-5] sm:text-base md:text-lg">
+              Since 1988
+            </span> */}
           </h1>
         </div>
 
@@ -73,7 +80,7 @@ function Nav() {
       </div>
      <div className="px-10">
       {/* Desktop Nav */}
-      <div className="hidden md:flex w-full bg-[#F15A24] py-3 rounded-tl-3xl rounded-br-3xl px-4 sm:px-10">
+      <div className="hidden md:flex w-full bg-[#F15A24] py-2 rounded-tl-3xl rounded-br-3xl px-4 sm:px-10">
         <ul className="flex lg:justify-around items-center w-full uppercase text-white lg:font-semibold md:justify-between text-sm sm:text-base">
           <Link href="/">Home</Link>
           <Link href="/theChambers">The Chambers</Link>
@@ -82,6 +89,34 @@ function Nav() {
           <Link href="/memberZone">Member&rsquo;s Zone</Link>
           {/* <Link href="/internationalPublication">International Publication</Link> */}
           <Link href="/media">Media</Link>        
+           <div
+             className="relative inline-block text-left"
+             onMouseEnter={() => setIsOpen(true)}
+             onMouseLeave={() => setIsOpen(false)}
+           >
+             {/* User Icon */}
+             <button className="p-2 rounded-full hover:bg-gray-700 transition border-3 border-[#F15A24] ">
+               <User size={35} className="text-white " />
+             </button>
+       
+             {/* Dropdown Menu */}
+             {isOpen && (
+               <div className="absolute right-0 w-40 bg-gray-800 rounded-lg shadow-lg py-2 z-50">
+                 <Link
+                   href="/signup"
+                   className="block px-4 py-2 text-white hover:bg-gray-700 transition"
+                 >
+                   Signup
+                 </Link>
+                 <Link
+                   href="/login"
+                   className="block px-4 py-2 text-white hover:bg-gray-700 transition"
+                 >
+                   Login
+                 </Link>
+               </div>
+             )}
+           </div>
         </ul>
       </div>
      </div>

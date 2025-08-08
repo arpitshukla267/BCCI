@@ -56,14 +56,17 @@ function Page() {
 
   const executive = [
     { name: <>Dheeraj Khullar</>, img: "/obdheeraj.png" },
-    { name: <>Amit Singh</>, img: "/ob3amit.png" },
     { name: <>Pawan Saravgi</>, img: "/ob2pawan.png" },
+    { name: <>Amit Singh</>, img: "/ob3amit.png" },
     { name: <>CA Kapil Khanna</>, img: "/ob4kapil.png" },
-    { name: <>Gaurav Gupta</>, img: "/Gaurav.png" },
-    { name: <>Atul Agarwal</>, img: "/Atul-Agarwal.png" },
-    { name: <>Sushil Parich</>, img: "/Sushil.png" },
-    { name: <>Raju Parwar</>, img: "/Raju.png" },
     { name: <>Atul Sharma</>, img: "/Atul.png" },
+    { name: <>Ajay Sijaria</>, img: "/Ajay.png" },
+    { name: <>Shiva Likdhari</>, img: "/shiva.png" },
+    { name: <>Atul Agarwal</>, img: "/Atul-Agarwal.png" },
+    { name: <>Raju Parwar</>, img: "/Raju.png" },
+    { name: <>Gaurav Gupta</>, img: "/Gaurav.png" },
+    { name: <>Rajeev Mehta</>, img: "/Rajeev-Mehta.png" },
+    { name: <>Sushil Parich</>, img: "/Sushil.png" },
     { name: <>Rajeev Khandelwal</>, img: "/Rajeev.png" },
     { name: <>Vijay Gupta</>, img: "/Vijay.png" },
     { name: <>Apurv Gupta</>, img: "/Apoorv.png" },
@@ -72,11 +75,8 @@ function Page() {
     { name: <>Naresh Gupta</>, img: "/Naresh.jpeg" },
     { name: <>Sanjay Rai</>, img: "/Sanjay.jpeg" },
     { name: <>Vivek Jain</>, img: "/vivek.jpg" },
-    { name: <>Ajay Sijaria</>, img: "/Ajay.png" },
-    { name: <>Shiva Likdhari</>, img: "/shiva.png" },
-    { name: <>Rajeev Mehta</>, img: "/Rajeev-Mehta.png" },
-    { name: <>Ratnesh Baghel</>, img: "/Ratnesh.png" },
-    { name: <>Saurabh Gaida</>, img: "/Saurabh.png" },
+    { name: <>Ratnesh Baghel</>, img: "/Ratnesh.jpg" },
+    { name: <>Saurabh Gaida</>, img: "/Saurabh.jpeg" },
   ];
 
   const fadeInProps = {
@@ -190,9 +190,9 @@ function Page() {
       <div className="relative md:mt-20 -mt-30 mb-20 md:mb-0">
         <motion.h1
           {...fadeInProps}
-    className="inline-block md:text-4xl text-2xl w-full font-bold md:font-extrabold text-orange-500 text-center mt-40 md:mb-10 mb-10 after:content-[''] after:block after:h-[5px] after:w-[30%] md:after:w-[15%] after:bg-orange-500 after:mx-auto after:mt-0 md:after:mt-1 after:rounded-full"
+          className="inline-block md:text-4xl text-2xl w-full font-bold md:font-extrabold text-orange-500 text-center mt-40 md:mb-10 mb-10 after:content-[''] after:block after:h-[5px] after:w-[30%] md:after:w-[15%] after:bg-orange-500 after:mx-auto after:mt-0 md:after:mt-1 after:rounded-full"
         >
-          BCCI Office Bearers
+          BCCI Elected Board
         </motion.h1>
       
         <div className="relative w-full">

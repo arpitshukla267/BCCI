@@ -7,6 +7,11 @@ const newsItems = [
   { src: "/Newz2.png" },
   { src: "/Newz3.png" },
   { src: "/Newz4.png" },
+  { src: "/Newz6.jpeg" },
+  { src: "/Newz7.jpeg" },
+  { src: "/Newz8.jpeg" },
+  { src: "/Newz9.jpeg" },
+  // { src: "/Newz10.jpeg" },
 ];
 
 export default function News() {
@@ -22,7 +27,7 @@ export default function News() {
       {/* Mobile Layout: All news stacked */}
       <div className="flex flex-col gap-6 lg:hidden">
         {/* First 2 news cards */}
-        {newsItems.slice(0, 2).map((item, i) => (
+        {newsItems.slice(0, 4).map((item, i) => (
           <NewsCard key={i} img={item.src} />
         ))}
 
@@ -44,7 +49,7 @@ export default function News() {
         </div>
 
         {/* Last 2 news cards */}
-        {newsItems.slice(2).map((item, i) => (
+        {newsItems.slice(4).map((item, i) => (
           <NewsCard key={i + 2} img={item.src} />
         ))}
       </div>
@@ -55,7 +60,7 @@ export default function News() {
         <div className="w-1/4 overflow-hidden h-full">
           <div className="scroll-container h-full">
             <div className="scroll-content">
-              {[...newsItems.slice(0, 2), ...newsItems.slice(0, 2)].map((item, i) => (
+              {[...newsItems.slice(0, 4), ...newsItems.slice(0, 4)].map((item, i) => (
                 <NewsCard key={i} img={item.src} />
               ))}
             </div>
@@ -94,7 +99,7 @@ export default function News() {
         <div className="w-1/4 overflow-hidden h-full">
           <div className="scroll-container h-full">
             <div className="scroll-content">
-              {[...newsItems.slice(2), ...newsItems.slice(2)].map((item, i) => (
+              {[...newsItems.slice(4), ...newsItems.slice(4)].map((item, i) => (
                 <NewsCard key={i + 2} img={item.src} />
               ))}
             </div>

@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 export default function About() {
   return (
     <div>
-      <Nav />
+      <div><Nav /></div>
 
       {/* ✅ Animated Section */}
       <motion.section

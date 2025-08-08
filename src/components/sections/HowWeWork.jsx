@@ -17,7 +17,7 @@ export default function HowWeWork() {
     },
     {
       title: <>Economic <br /> Development</>,
-      image: "/howwework1.png",
+      image: "/howwework3.png",
       description: "We work towards the economic development of the Bundelkhand region.",
     },
     {

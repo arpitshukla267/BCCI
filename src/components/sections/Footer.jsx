@@ -1,7 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaFacebook, FaYoutube, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaYoutube, FaInstagram} from "react-icons/fa";
+import { FiPhone } from "react-icons/fi";
+import { Mail } from 'lucide-react';
 
 function Footer() {
   return (
@@ -43,9 +45,11 @@ function Footer() {
             </div>
       
             {/* Middle: Location */}
-            <div className="flex flex-col gap-3">
-              <h2 className="text-2xl font-semibold">How To Find Us</h2>
-              <p className="text-lg">Jhansi</p>
+            <div className="flex flex-col gap-1">
+              <h2 className="text-2xl font-semibold mb-5">How To Find Us</h2>
+              <p className="text-lg">Hankul Packwell Pvt Ltd.</p>
+              <p className="text-lg">Pal colony lane.</p>
+              <p className="text-lg">Gwalior Road, Jhansi 284003.</p>
             </div>
       
             {/* Middle: Chamber Links */}
@@ -67,6 +71,19 @@ function Footer() {
                 <Link href="https://www.instagram.com/"><FaInstagram size={40} /></Link>
                 <Link href="https://www.youtube.com/"><FaYoutube size={40} /></Link>
               </div>
+                  
+             <a
+               href="tel:+91 98765 43210" 
+               className="flex items-center gap-2 text-lg">
+               <FiPhone className="text-white" />
+               <span >+91 98765 43210</span>
+             </a>
+             <a
+               href="bccijhansi@gmail.com"  
+               className="flex items-center gap-2 text-lg">
+               <Mail className="text-white" />
+               <span >bccijhansi@gmail.com</span>
+             </a>
             </div>
           </div>
       
