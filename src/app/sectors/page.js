@@ -29,13 +29,13 @@ function page() {
       <div className="px-10">
         {/* Hero Section */}
         <div
-          className=" w-full min-h-[400px] lg:flex flex-col items-center justify-center rounded-tl-2xl rounded-3xl bg-cover bg-center"
+          className="hidden w-full min-h-[400px] lg:flex flex-col items-center justify-center rounded-tl-2xl rounded-3xl bg-cover bg-center"
           style={{ backgroundImage: "url('/sectorsPage.jpg')" }}
         ></div>
 
         <motion.h1
           {...fadeInProps}
-          className="inline-block md:text-8xl text-2xl w-full font-bold md:font-extrabold text-orange-500 text-center mt-10 md:mb-10 mb-0 after:content-[''] after:block after:h-[9px] after:w-[30%] md:after:w-[15%] after:bg-orange-500 after:mx-auto after:mt-0 md:after:mt-0 after:rounded-full"
+          className="inline-block md:text-8xl text-3xl w-full font-bold md:font-extrabold text-orange-500 text-center mt-40 md:mb-10 mb-0 after:content-[''] after:block after:h-[5px] md:after:h-[9px] after:w-[21%] md:after:w-[15%] after:bg-orange-500 after:mx-auto after:mt-0 md:after:mt-0 after:rounded-full"
         >
           Sectors
         </motion.h1>

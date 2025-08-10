@@ -19,7 +19,7 @@ export default function News() {
     <section className="max-w-[1400px] mt-20 mx-auto px-4 sm:px-6 overflow-hidden">
       {/* Heading */}
       <div className="flex justify-center mt-4 mb-4">
-        <div className="md:bg-orange-500 md:text-white inline-block text-orange-400 mt-5 font-extrabold text-lg sm:text-xl py-2 px-6 sm:px-7 md:rounded  mb-4 after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-500 after:mx-auto after:mt-0 after:rounded-full">
+        <div className="md:bg-orange-500 md:text-white inline-block text-orange-400 mt-5 font-extrabold text-2xl sm:text-xl py-2 px-6 sm:px-7 md:rounded after:content-[''] after:block after:h-[4px] after:w-[70%] after:bg-orange-500 after:mx-auto after:mt-0 after:rounded-full">
           News
         </div>
       </div>
@@ -121,7 +121,7 @@ function NewsCard({ img }) {
       <h3 className="text-[18px] sm:text-[20px] md:text-[24px] font-bold text-black leading-tight mb-1">
         Jhansi To Become Industrial Hub
       </h3>
-      <p className="text-[12px] sm:text-[14px] text-gray-700 leading-snug">
+      <p className="text-[14px] md:text-[14px] text-gray-700 leading-snug">
         The Bundelkhand Industrial Development Authority (BIDA) is acquiring
         ~18,000 acres in Jhansi to build a Noida-style industrial city.
       </p>

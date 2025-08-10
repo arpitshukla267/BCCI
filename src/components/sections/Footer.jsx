@@ -120,10 +120,14 @@ function Footer() {
         </div>
 
         {/* Location */}
-        <div className="flex flex-col items-center lg:items-start text-white gap-3">
-          <h1 className="text-xl font-semibold">How to find us</h1>
-          <p>Jhansi</p>
+        <div className="flex flex-col items-center lg:items-start text-white ">
+          <h2 className="text-xl font-semibold mb-3">How To Find Us</h2>
+          <p className="text-lg">Hankul Packwell Pvt Ltd.</p>
+          <p className="text-lg">Pal colony lane.</p>
+          <p className="text-lg">Gwalior Road.</p>
+          <p className="text-lg"> Jhansi 284003.</p>
         </div>
+
 
         {/* Navigation Links */}
         <div className="flex flex-col items-center lg:items-start text-white gap-3">
@@ -131,7 +135,7 @@ function Footer() {
           <ul className="flex flex-col gap-1 items-center">
             <Link href="/" className="hover:underline">Home</Link>
             <Link href="/about" className="hover:underline">About Us</Link>
-            <Link href="/services" className="hover:underline">Services</Link>
+            <Link href="/servicesPage" className="hover:underline">Services</Link>
             <Link href="/" className="hover:underline">Contact Us</Link>
           </ul>
         </div>
@@ -144,10 +148,22 @@ function Footer() {
             <Link href="https://www.instagram.com/"><FaInstagram size={30} /></Link>
             <Link href="https://www.youtube.com/"><FaYoutube size={30} /></Link>
           </div>
+          <a
+            href="tel:+91 98765 43210" 
+            className="flex items-center gap-2 text-lg">
+            <FiPhone className="text-white" />
+            <span >+91 98765 43210</span>
+          </a>
+          <a
+            href="bccijhansi@gmail.com"  
+            className="flex items-center gap-2 text-lg">
+            <Mail className="text-white" />
+            <span >bccijhansi@gmail.com</span>
+          </a>
         </div>
       </div>
       {/* Copyright */}
-      <div className="block lg:hidden w-full bg-black text-white text-sm text-center mb-[-0.3rem] py-4">
+      <div className="block lg:hidden w-full bg-black text-white text-xs text-center mb-[-0.3rem] py-4">
         © 2025 Bundelkhand Chamber of Commerce and Industry
       </div>
 

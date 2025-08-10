@@ -98,18 +98,6 @@ const membersMobile = [
    
   },
   {
-    src: '/ob3amit.png',
-    alt: 'Amit',
-    height: '22rem',
-    width: '22rem',
-    zIndex: 10,
-    left: '3rem',
-    name: 'Amit Singh',
-    title: 'Joint Secreatry',
-    description: 'Maa Pitambra Industries'
-  
-  },
-  {
     src: '/ob2pawan.png',
     alt: 'Pawan',
     height: '22rem',
@@ -120,6 +108,18 @@ const membersMobile = [
     title: 'General Secreatry',
     description: 'Jhansi Granite Stone Products Private Limited'
 
+  },
+  {
+    src: '/ob3amit.png',
+    alt: 'Amit',
+    height: '22rem',
+    width: '22rem',
+    zIndex: 10,
+    left: '3rem',
+    name: 'Amit Singh',
+    title: 'Joint Secreatry',
+    description: 'Maa Pitambra Industries'
+  
   },
   {
     src: '/ob4kapil.png',

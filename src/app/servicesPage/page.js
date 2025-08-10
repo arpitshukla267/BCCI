@@ -55,7 +55,7 @@ function Page() {
         
          <motion.h1
            {...fadeInProps}
-           className="inline-block md:text-7xl text-2xl w-full font-bold md:font-extrabold text-orange-500 text-center mt-10 md:mb-10 mb-10 after:content-[''] after:block after:h-[5px] after:w-[30%] md:after:w-[15%] after:bg-orange-500 after:mx-auto after:mt-0 md:after:mt-1 after:rounded-full"
+           className="hidden lg:inline-block md:text-7xl text-2xl w-full text-top font-bold md:font-extrabold text-orange-500 text-center mt-10 md:mb-10 mb-10 after:content-[''] after:block after:h-[9px] after:w-[30%] md:after:w-[15%] after:bg-orange-500 after:mx-auto after:mt-0 md:after:mt-1 after:rounded-full"
          >
            Services
          </motion.h1>
@@ -68,7 +68,7 @@ function Page() {
           variants={fadeIn}
           className="text-center md:mt-10 mt-45"
         >
-          <h1 className="inline-block md:hidden text-4xl font-extrabold text-orange-500 mb-10 after:content-[''] after:block after:h-[5px] after:w-[60%] after:bg-orange-500 after:mx-auto after:mt-1 after:rounded-full">
+          <h1 className="inline-block md:hidden text-4xl font-extrabold text-orange-500 mb-10 after:content-[''] after:block after:h-[5px] after:w-[60%] after:bg-orange-500 after:mx-auto after:mt-0 after:rounded-full">
             Services
           </h1>
         </motion.div>
@@ -81,21 +81,13 @@ function Page() {
       </div>
 
       {/* Cards Section */}
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeIn}
+      <div
         className='md:px-10 xl:px-0 lg:mb-[-7rem] md:mb-0 mb-30'
       >
         <div className="w-full max-w-6xl mx-auto py-2 px-10 md:px-0 md:py-12 grid md:grid-cols-3 gap-15 lg:gap">
           {cards.map((card, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-              viewport={{ once: true }}
               className={`flip-card hover:scale-115 transition-transform duration-300 ${flippedIndex === index ? 'flipped' : ''}`}
             >
               <div className="flip-card-inner flex flex-col relative">
@@ -127,19 +119,14 @@ function Page() {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
-      </motion.div>
+      </div>
 
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeIn}
-      >
+      <div>
         <Footer />
-      </motion.div>
+      </div>
     </div>
   );
 }

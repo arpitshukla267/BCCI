@@ -153,7 +153,8 @@ function Nav() {
             className="md:hidden w-full bg-[#F15A24] rounded-tl-3xl rounded-br-3xl px-4 mt-5 z-40 overflow-hidden"
           >
             <ul className="flex flex-col gap-4 text-white uppercase font-semibold text-sm py-4">
-              <Link href="/theChambers" className="border-b border-white border-b-[1px] pb-1">The Chamber</Link>
+              <Link href="/theChambers" className="border-b border-white border-b-[1px] pb-1">Home</Link>
+              <Link href="/theChambers" className="border-b border-white border-b-[1px] pb-2 mt-[-5px]" >The Chamber</Link>
               <Link href="/servicesPage" className="border-b border-white border-b-[1px] pb-2 mt-[-5px]" >Services</Link>
               <Link href="/sectors" className="border-b border-white border-b-[1px] pb-2 mt-[-5px]">Sectors</Link>
               <Link href="/memberZone" className="border-b border-white border-b-[1px] pb-2 mt-[-5px]">Member&rsquo;s Zone</Link>

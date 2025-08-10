@@ -21,13 +21,13 @@ export default function About() {
         style={{ backgroundImage: "url('/about.jpeg')" }}
       >
         <div className="max-w-full w-full px-6 z-2">
-          <h2 className="md:text-5xl text-4xl font-extrabold text-orange-600 border-b-4 border-orange-600 inline-block mb-5">
+          <h2 className="md:text-5xl text-3xl mt-10 font-extrabold text-orange-600 border-b-4 border-orange-600 inline-block mb-5">
             About Us
           </h2>
           <h1 className="md:text-5xl text-2xl font-extrabold text-gray-800 mb-6 leading-snug">
             Discover Our Story Of <br /> Success
           </h1>
-          <p className="text-xl text-gray-600 leading-7 mb-12">
+          <p className="text-lg md:text-xl text-gray-600 leading-7 mb-12">
             From humble beginnings to industry leadership, we’ve taken bold steps
             <br />
             towards excellence. Join us in our ongoing pursuit of innovation.
@@ -39,9 +39,9 @@ export default function About() {
             {features.map(({ icon, title, desc }) => (
               <div key={title} className="text-center w-64">
                 <img src={icon} alt={title} className="mx-auto md:mb-5" />
-                <h3 className="text-2xl font-semibold text-orange-600 mb-3">{title}</h3>
+                <h3 className="text-xl md:text-2xl font-semibold text-orange-600 mb-1 md:mb-3">{title}</h3>
                 <p
-                  className="text-lg font-semibold text-gray-800 mb-2 md:mb-0"
+                  className="text-md md:text-lg font-semibold text-gray-800 mb-2 md:mb-0"
                   dangerouslySetInnerHTML={{ __html: desc }}
                 />
               </div>

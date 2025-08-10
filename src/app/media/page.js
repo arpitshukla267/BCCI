@@ -37,7 +37,7 @@ function Page() {
         viewport={{ once: true }}
         className="text-center md:mt-10 mt-45"
       >
-        <h1 className="inline-block text-4xl font-extrabold text-orange-500 mb-10 after:content-[''] after:block after:h-[5px] after:w-[60%] after:bg-orange-500 after:mx-auto after:mt-1 after:rounded-full">
+        <h1 className="inline-block text-4xl font-extrabold text-orange-500 mb-10 after:content-[''] after:block after:h-[5px] after:w-[60%] after:bg-orange-500 after:mx-auto after:mt-0 after:rounded-full">
           Media
         </h1>
       </motion.div>
@@ -100,7 +100,7 @@ function Page() {
           viewport={{ once: true }}
           className={`${
             expanded
-              ? "lg:flex lg:flex-row lg:flex-wrap lg:justify-center grid grid-cols-2 gap-x-0 gap-y-5  md:gap-15"
+              ? "lg:flex lg:flex-row lg:flex-wrap lg:justify-center grid grid-cols-2 gap-x-0 gap-y-5 md:gap-15"
               : "animate-marquee whitespace-nowrap py-6 flex gap-4 sm:gap-8 h-fit"
           }`}
         >

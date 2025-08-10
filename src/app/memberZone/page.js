@@ -41,7 +41,7 @@ export default function Page() {
         {/* Heading */}
          <motion.h1
            {...fadeInProps}
-           className="inline-block md:text-7xl text-2xl w-full font-bold md:font-extrabold text-orange-500 text-center mt-40 md:mt-10 md:mb-10 mb-10 after:content-[''] after:block md:after:h-[5px] after:h-[3px] after:w-[30%] md:after:w-[15%] after:bg-orange-500 after:mx-auto after:mt-0 md:after:mt-1 after:rounded-full"
+           className="inline-block md:text-7xl text-2xl w-full font-bold md:font-extrabold text-orange-500 text-center mt-40 md:mt-10 md:mb-10 mb-10 after:content-[''] after:block md:after:h-[5px] after:h-[3px] after:w-[40%] md:after:w-[15%] after:bg-orange-500 after:mx-auto after:mt-0 md:after:mt-1 after:rounded-full"
          >
            Members Zone
          </motion.h1>
