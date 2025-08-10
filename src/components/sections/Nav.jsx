@@ -5,12 +5,24 @@ import { RxHamburgerMenu } from "react-icons/rx";  // Add this line
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";  // Assuming you want to use Link for navigation
 import { User } from "lucide-react";
+import { usePathname } from "next/navigation"; // add at the top
 
  // Assuming Nav is in the same directory
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname(); // get current path
+
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/theChambers", label: "The Chambers" },
+    { href: "/servicesPage", label: "Services" },
+    { href: "/sectors", label: "Sectors" },
+    { href: "/memberZone", label: "Member’s Zone" },
+    { href: "/media", label: "Media" }
+  ];
+
   useEffect(() => {
     if (menuOpen) {
       // Disable scrolling
@@ -78,48 +90,56 @@ function Nav() {
       <div className="px-4 sm:px-10">
         <div className="w-full h-[14px] bg-[#F15A24] rounded-tl-3xl z-1 rounded-br-3xl md:mb-5 mb-[-8px]"></div>
       </div>
-     <div className="px-10">
-      {/* Desktop Nav */}
-      <div className="hidden md:flex w-full bg-[#F15A24] py-2 rounded-tl-3xl rounded-br-3xl px-4 sm:px-10">
-        <ul className="flex lg:justify-around items-center w-full uppercase text-white lg:font-semibold md:justify-between text-sm sm:text-base">
-          <Link href="/">Home</Link>
-          <Link href="/theChambers">The Chambers</Link>
-          <Link href="/servicesPage">Services</Link>
-          <Link href="/sectors">Sectors</Link>
-          <Link href="/memberZone">Member&rsquo;s Zone</Link>
-          {/* <Link href="/internationalPublication">International Publication</Link> */}
-          <Link href="/media">Media</Link>        
-           <div
-             className="relative inline-block text-left"
-             onMouseEnter={() => setIsOpen(true)}
-             onMouseLeave={() => setIsOpen(false)}
-           >
-             {/* User Icon */}
-             <button className="p-2 rounded-full hover:bg-gray-700 transition border-3 border-[#F15A24] ">
-               <User size={35} className="text-white " />
-             </button>
-       
-             {/* Dropdown Menu */}
-             {isOpen && (
-               <div className="absolute right-0 w-40 bg-gray-800 rounded-lg shadow-lg py-2 z-50">
-                 <Link
-                   href="/signup"
-                   className="block px-4 py-2 text-white hover:bg-gray-700 transition"
-                 >
-                   Signup
-                 </Link>
-                 <Link
-                   href="/login"
-                   className="block px-4 py-2 text-white hover:bg-gray-700 transition"
-                 >
-                   Login
-                 </Link>
-               </div>
-             )}
-           </div>
-        </ul>
+
+
+      <div className="px-10">
+        {/* Desktop Nav */}
+        <div className="hidden md:flex w-full bg-[#F15A24] py-2 rounded-tl-3xl rounded-br-3xl px-4 sm:px-10">
+          <ul className="flex lg:justify-around items-center w-full uppercase lg:font-semibold md:justify-between text-sm sm:text-base">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`px-3 py-2 rounded-md transition-colors ${
+                  pathname === link.href
+                    ? "bg-orange-800 text-white"
+                    : "text-white hover:bg-orange-800 "
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+  
+            {/* User menu remains as before */}
+            <div
+              className="relative inline-block text-left"
+              onMouseEnter={() => setIsOpen(true)}
+              onMouseLeave={() => setIsOpen(false)}
+            >
+              <button className="p-2 rounded-full hover:bg-gray-700 transition border-3 border-[#F15A24]">
+                <User size={35} className="text-white" />
+              </button>
+              {isOpen && (
+                <div className="absolute right-0 w-40 bg-gray-800 rounded-lg shadow-lg py-2 z-50">
+                  <Link
+                    href="/signup"
+                    className="block px-4 py-2 text-white hover:bg-gray-700 transition"
+                  >
+                    Signup
+                  </Link>
+                  <Link
+                    href="/login"
+                    className="block px-4 py-2 text-white hover:bg-gray-700 transition"
+                  >
+                    Login
+                  </Link>
+                </div>
+              )}
+            </div>
+          </ul>
+        </div>
       </div>
-     </div>
+
       {/* Mobile Nav */}
       <AnimatePresence>
        <div className="px-4"> 
@@ -137,8 +157,11 @@ function Nav() {
               <Link href="/servicesPage" className="border-b border-white border-b-[1px] pb-2 mt-[-5px]" >Services</Link>
               <Link href="/sectors" className="border-b border-white border-b-[1px] pb-2 mt-[-5px]">Sectors</Link>
               <Link href="/memberZone" className="border-b border-white border-b-[1px] pb-2 mt-[-5px]">Member&rsquo;s Zone</Link>
-              {/* <Link href="/internationalPublication" className="border-b border-white border-b-[1px] pb-2 mt-[-5px]">International Publication</Link> */}
-              <Link href="/media" className="mt-[-5px]">Media</Link>        
+              <Link href="/media" className="border-b border-white border-b-[1px] pb-2 mt-[-5px]">Media</Link>
+              <div className="flex justify-around">
+                <Link href="/login" className="mt-[-5px]">Login</Link>
+                <Link href="/signup" className="mt-[-5px]">Signup</Link>      
+              </div> 
             </ul>
           </motion.div>
         )}
