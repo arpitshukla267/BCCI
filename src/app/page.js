@@ -7,6 +7,7 @@ import Services from "@/components/sections/Services";
 import Footer from "@/components/sections/Footer";
 import OfficeBariers from "@/components/sections/OfficeBariers";
 import ContactPage from "./contact/page";
+import OurVision from "@/components/sections/OurVision";
 
 export default function Home() {
   return(
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <Newz />
       <About />
+      <OurVision />
       <HowWeWork />
       <Sectors />
       <Services />

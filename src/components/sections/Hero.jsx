@@ -7,16 +7,6 @@ import Link from "next/link"; // ✅ Step 1: Import Link
 
 const images = [
   {
-    src: "/hero1.jpg",
-    heading: (
-      <>
-        Empowering Businesses <br /> in Bundelkhand
-      </>
-    ),
-    button: "Join Us Today",
-    link: "/membership", // ✅ Step 2: Add link
-  },
-  {
     src: "/hero2.jpeg",
     heading: (
       <>
@@ -38,6 +28,16 @@ const images = [
   },
   {
     src: "/hero1.jpg",
+    heading: (
+      <>
+        Empowering Businesses <br /> in Bundelkhand
+      </>
+    ),
+    button: "Join Us Today",
+    link: "/membership", 
+  },
+  {
+    src: "/hero4.jpeg",
     heading: (
       <>
         Empowering Businesses <br /> in Bundelkhand
@@ -47,7 +47,7 @@ const images = [
     link: "/membership",
   },
   {
-    src: "/hero2.jpeg",
+    src: "/hero5.jpeg",
     heading: (
       <>
         Networking for Growth <br /> & Innovation
@@ -56,16 +56,7 @@ const images = [
     button: "Become a Member",
     link: "/join-us",
   },
-  {
-    src: "/hero3.jpeg",
-    heading: (
-      <>
-        Collaborate. Innovate. <br /> Succeed.
-      </>
-    ),
-    button: "Explore Services",
-    link: "/services",
-  },
+
 ];
 
 export default function Hero() {

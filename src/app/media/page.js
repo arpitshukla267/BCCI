@@ -7,12 +7,12 @@ import { motion } from "framer-motion";
 
 function Page() {
   const media = [
-    { img: "/mediabottom-1.jpg", description: "Collaboration with HDFC Bank on Loan Drive" },
-    { img: "/mediabottom-2.jpg", description: "Collaboration with HDFC Bank on Loan Drive" },
-    { img: "/mediabottom-3.jpg", description: "Collaboration with HDFC Bank on Loan Drive" },
-    { img: "/mediabottom-4.jpg", description: "Collaboration with HDFC Bank on Loan Drive" },
-    { img: "/mediabottom-5.jpg", description: "Collaboration with HDFC Bank on Loan Drive" },
-    { img: "/mediabottom-6.jpg", description: "Collaboration with HDFC Bank on Loan Drive" },
+    { img: "/mediabottom-1.jpg", description: "Meeting with minister of state" },
+    { img: "/mediabottom-2.jpg", description: "Industrial area visit by senior office" },
+    { img: "/mediabottom-3.jpg", description: "Business summit in presence of Uma Bharti & Satish Mahana" },
+    { img: "/mediabottom-4.jpg", description: "Excellence award by Bundelkhand Chamber Of Commerce to various industrialist" },
+    { img: "/mediabottom-5.jpg", description: "Clean jhansi green jhansi campaign" },
+    { img: "/mediabottom-6.jpg", description: "Agro summit" },
   ];
 
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -60,7 +60,7 @@ function Page() {
             className="rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none w-full md:h-[258px] md:w-auto object-cover"
           />
           <div className="p-4 text-left">
-            <h2 className="text-xl font-semibold mb-5 text-black">New Office Bearers Took Oath</h2>
+            <h2 className="text-xl font-semibold mb-5 text-black">MSME Summit</h2>
             <p className="text-sm text-gray-600">
               Dheeraj Khullar, the new Chamber President, pledged active efforts toward resolving traders’ issues
               and boosting regional growth. Administrators like the Divisional Commissioner and District Magistrate
