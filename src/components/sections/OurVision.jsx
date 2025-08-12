@@ -32,32 +32,31 @@ const benefits = [
   { title: "Social Responsibility", desc: "To implement and manage social, charitable, and ethical initiatives for the welfare of citizens at both state and national levels." }
 ];
 
-
-// Split into two groups of 8
-const slides = [
-  benefits.slice(0, 8),
-  benefits.slice(8, 16),
-  benefits.slice(16, 24),
-
-];
-
 export default function OurVision() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [slides, setSlides] = useState([]);
 
-  useEffect(() => {
-    const updateSlides = () => {
-      if (window.innerWidth < 640) { // mobile breakpoint (Tailwind sm)
-        setSlides(chunkArray(benefits, 4)); // 2x2 layout
-      } else {
-        setSlides(chunkArray(benefits, 8)); // desktop: 4x2 layout
-      }
+  const chunkArray = (arr, size) => {
+    let result = [];
+    for (let i = 0; i < arr.length; i += size) {
+      result.push(arr.slice(i, i + size));
+    }
+    return result;
   };
 
-  updateSlides(); // run on mount
-  window.addEventListener("resize", updateSlides);
-  return () => window.removeEventListener("resize", updateSlides);
-}, []);
+  useEffect(() => {
+    const updateSlides = () => {
+      if (window.innerWidth < 640) {
+        setSlides(chunkArray(benefits, 4)); // mobile: 2x2
+      } else {
+        setSlides(chunkArray(benefits, 8)); // desktop: 4x2
+      }
+    };
+
+    updateSlides();
+    window.addEventListener("resize", updateSlides);
+    return () => window.removeEventListener("resize", updateSlides);
+  }, []);
 
   const handleNext = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -68,20 +67,11 @@ export default function OurVision() {
   };
 
   const swipeHandlers = useSwipeable({
-    onSwipedLeft: () => handleNext(),
-    onSwipedRight: () => handlePrev(),
+    onSwipedLeft: handleNext,
+    onSwipedRight: handlePrev,
     preventDefaultTouchmoveEvent: true,
     trackMouse: true,
   });
-
-  const chunkArray = (arr, size) => {
-  let result = [];
-  for (let i = 0; i < arr.length; i += size) {
-    result.push(arr.slice(i, i + size));
-  }
-  return result;
-};
-
 
   return (
     <div className="w-full my-10 bg-white max-h-screen">
@@ -106,34 +96,35 @@ export default function OurVision() {
             <ChevronLeft size={24} />
           </button>
 
-          {/* Slides Container */}
-          <div className="overflow-x-auto overflow-y-hidden no-scrollbar">
+          {/* Slides */}
+          <div className="overflow-y-hidden overflow-x-auto no-scrollbar">
             <div
               className="flex transition-transform duration-500"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
-             {slides.map((group, index) => (
-               <div
-                 key={index}
-                 className="min-w-full grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 md:gap-6 gap-2 p-1 lg:p-4"
-               >
-                 {group.map((item, idx) => (
-                   <motion.div
-                     key={idx}
-                     initial={{ opacity: 0, y: 20 }}
-                     whileInView={{ opacity: 1, y: 0 }}
-                     transition={{ duration: 0.5, delay: idx * 0.05 }}
-                     className="bg-orange-50 rounded-lg lg:p-5 p-3 border border-orange-200 shadow-sm hover:shadow-lg hover:scale-105 transition-transform duration-300"
-                   >
-                     <h3 className="lg:text-lg text-[13px] font-semibold font-sans md:mt-3 mt-1 text-orange-700">
-                       {item.title}
-                     </h3>
-                     <p className="lg:text-sm text-[10px] mt-2 text-orange-800">{item.desc}</p>
-                   </motion.div>
-                 ))}
-               </div>
-             ))}
-
+              {slides.map((group, index) => (
+                <div
+                  key={index}
+                  className="min-w-full grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 md:gap-6 gap-2 p-1 lg:p-4 items-stretch"
+                >
+                  {group.map((item, idx) => (
+                    <motion.div
+                      key={idx}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: idx * 0.05 }}
+                      className="bg-orange-50 rounded-lg lg:p-5 p-3 border border-orange-200 shadow-sm hover:shadow-lg hover:scale-105 transition-transform duration-300 flex flex-col h-56 sm:h-64"
+                    >
+                      <h3 className="lg:text-lg text-[13px] font-semibold font-sans md:mt-3 mt-1 text-orange-700">
+                        {item.title}
+                      </h3>
+                      <p className="lg:text-sm text-[10px] mt-2 text-orange-800">
+                        {item.desc}
+                      </p>
+                    </motion.div>
+                  ))}
+                </div>
+              ))}
             </div>
           </div>
 

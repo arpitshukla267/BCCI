@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaFacebook, FaYoutube, FaInstagram} from "react-icons/fa";
+import { FaFacebook, FaYoutube, FaInstagram, FaTwitter} from "react-icons/fa";
 import { FiPhone } from "react-icons/fi";
 import { Mail } from 'lucide-react';
 
@@ -67,9 +67,9 @@ function Footer() {
             <div className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold">Social Links</h2>
               <div className="flex gap-4">
-                <Link href="https://www.facebook.com/"><FaFacebook size={40} /></Link>
-                <Link href="https://www.instagram.com/"><FaInstagram size={40} /></Link>
-                <Link href="https://www.youtube.com/"><FaYoutube size={40} /></Link>
+                 <Link href="https://x.com/Bundelkhan85128?t=Fmh9L5FbnKQc2rJ1Z4IaCw&s=09"><FaTwitter size={30} /></Link>
+                 <Link href="https://www.instagram.com/bundelkhand.chamberofcommerce?igsh=MWI4YjIzenpnd2lwcw=="><FaInstagram size={30} /></Link>
+                 <Link href="https://youtube.com/@bundelkhandchamberofcommerce?si=eICTBzQNq0XHK6Qz"><FaYoutube size={30} /></Link>
               </div>
                   
              <a
@@ -144,9 +144,9 @@ function Footer() {
         <div className="flex flex-col items-center lg:items-start text-white gap-3">
           <h1 className="text-xl font-semibold">Social Links</h1>
           <div className="flex gap-4">
-            <Link href="https://www.facebook.com/"><FaFacebook size={30} /></Link>
-            <Link href="https://www.instagram.com/"><FaInstagram size={30} /></Link>
-            <Link href="https://www.youtube.com/"><FaYoutube size={30} /></Link>
+            <Link href="https://x.com/Bundelkhan85128?t=Fmh9L5FbnKQc2rJ1Z4IaCw&s=09"><FaTwitter size={30} /></Link>
+            <Link href="https://www.instagram.com/bundelkhand.chamberofcommerce?igsh=MWI4YjIzenpnd2lwcw=="><FaInstagram size={30} /></Link>
+            <Link href="https://youtube.com/@bundelkhandchamberofcommerce?si=eICTBzQNq0XHK6Qz"><FaYoutube size={30} /></Link>
           </div>
           <a
             href="tel:+91 98765 43210" 
